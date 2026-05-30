@@ -1,0 +1,236 @@
+/* =========================================================
+   CONTACT SECTION - FINAL PRODUCTION CSS
+   ========================================================= */
+
+.contact-section {
+  padding: 120px 5%;
+  background: #05070d;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Large Text */
+.contact-bg-text {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 15vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Ambient Glow */
+.contact-bg-glow {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 210, 230, 0.1), transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* LEFT: Info Styling */
+.section-tag {
+  color: #00d2e6;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.panel-title { 
+  font-size: clamp(2.5rem, 5vw, 3.5rem); 
+  line-height: 1.1; 
+  margin-bottom: 30px; 
+}
+
+.panel-title span { color: rgba(255, 255, 255, 0.3); }
+
+.panel-description {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 450px;
+}
+
+.info-item { margin-bottom: 25px; }
+.info-item span { display: block; font-size: 0.7rem; color: #00d2e6; margin-bottom: 5px; letter-spacing: 1px; }
+.info-item p { font-size: 1.1rem; }
+
+.social-links { display: flex; gap: 30px; margin-top: 40px; }
+.social-links a { 
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 0.9rem; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  transition: 0.3s;
+}
+.social-links a:hover { color: #00d2e6; border-color: #00d2e6; }
+
+/* RIGHT: Form Styling */
+.contact-form-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+}
+
+.form-input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; font-size: 0.75rem; margin-bottom: 8px; color: rgba(255,255,255,0.5); }
+
+input, select, textarea {
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus { border-color: #00d2e6; outline: none; }
+
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  color: #05070d;
+}
+
+.submit-btn:hover { background: #00d2e6; color: #fff; }
+
+.response-text { text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 20px; }
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .contact-container { grid-template-columns: 1fr; gap: 60px; }
+  .contact-bg-text { display: none; } /* Hide bg text on mobile */
+}
+
+@media (max-width: 600px) {
+  .form-input-row { grid-template-columns: 1fr; }
+  .contact-form-wrapper { padding: 30px; }
+  .panel-title { font-size: 2rem; }
+}
+/* =========================================================
+   MOBILE RESPONSIVE - BENTO GRID
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .featured-section {
+    padding: 70px 1rem;
+  }
+
+  .portfolio-header {
+    margin-bottom: 40px;
+  }
+
+  .tagline {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+  }
+
+  .portfolio-header h2 {
+    font-size: 1.9rem;
+    line-height: 1.1;
+  }
+
+  .featured-description {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  /* =========================================
+     BENTO GRID MOBILE
+  ========================================= */
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 170px;
+    gap: 10px;
+  }
+
+  .bento-item {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* HERO CARD */
+  .item-1 {
+    grid-column: span 2 !important;
+    height: 220px;
+  }
+
+  /* NORMAL ITEMS */
+  .item-2 {
+    height: 190px;
+  }
+
+  .item-3 {
+    height: 190px;
+  }
+
+  .item-4 {
+    height: 190px;
+  }
+
+  /* FULL WIDTH LAST CARD */
+  .bento-grid .item-5 {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Overlay */
+  .overlay {
+    padding: 14px;
+  }
+
+  .mini-tag {
+    font-size: 0.45rem;
+    letter-spacing: 1px;
+  }
+
+  .text-content h4 {
+    font-size: 0.85rem;
+    margin: 4px 0;
+  }
+
+  .text-content p {
+    font-size: 0.65rem;
+    line-height: 1.4;
+  }
+
+  .arrow-btn {
+    padding: 8px;
+  }
+}

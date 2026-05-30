@@ -1,0 +1,385 @@
+/* =========================================================
+   CINEMATIC PACKAGES SECTION - FULL CSS
+   ========================================================= */
+
+.packages {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #05070d;
+  padding: 120px 5%;
+  color: #ffffff;
+}
+
+/* 1. GRAIN TEXTURE (Agency Vibe) */
+.packages::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/grain.png"); /* Optional: add grain pattern image */
+  opacity: 0.04;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 2. BACKGROUND TEXT (The "Identity" Effect) */
+.packages-bg-text {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18vw;
+  font-weight: 900;
+  letter-spacing: -12px;
+  color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+/* 3. SECTION HEADER */
+.packages-header {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.packages-header p {
+  color: #00d2e6;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.packages-header h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.packages-header h2 span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.packages-subtext {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* 4. PACKAGES GRID CONTAINER */
+.packages-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* 5. PRICING CARD */
+.package-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 45px;
+  border-radius: 30px;
+  position: relative;
+  backdrop-filter: blur(20px);
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.package-card:hover {
+  border-color: rgba(0, 210, 230, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.package-card.featured {
+  border-color: #00d2e6;
+  background: rgba(0, 210, 230, 0.04);
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #00d2e6;
+  color: #05070d;
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 6px 15px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* CARD CONTENT */
+.package-mini-title {
+  color: #00d2e6;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.package-card h3 {
+  font-size: 1.75rem;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.price-box {
+  margin: 30px 0;
+}
+
+.price-box h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: -2px;
+}
+
+.event-text {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+/* FEATURES LIST */
+.features {
+  margin: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-dot {
+  color: #00d2e6;
+  font-size: 0.8rem;
+}
+
+/* BUTTON */
+.package-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.package-btn:hover {
+  background: #fff;
+  color: #05070d;
+}
+
+/* 6. RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+  .packages-container { grid-template-columns: 1fr; max-width: 600px; }
+  .packages-bg-text { display: none; }
+}
+
+@media (max-width: 768px) {
+  .packages { padding: 80px 1rem; }
+  .packages-header h2 { font-size: 2.5rem; }
+  .package-card { padding: 30px; }
+}
+/* =========================================================
+   MOBILE RESPONSIVE - PACKAGES SECTION
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .packages {
+    padding: 90px 1.5rem;
+  }
+
+  /* Background Typography */
+  .packages-bg-text {
+    display: none;
+  }
+
+  /* Header */
+  .packages-header {
+    margin-bottom: 55px;
+    max-width: 100%;
+  }
+
+  .packages-header p {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+  }
+
+  .packages-header h2 {
+    font-size: 2.4rem;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .packages-subtext {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* Grid */
+  .packages-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 650px;
+  }
+
+  /* Cards */
+  .package-card {
+    padding: 32px 26px;
+    border-radius: 24px;
+  }
+
+  .badge {
+    top: 18px;
+    right: 18px;
+    font-size: 0.55rem;
+    padding: 5px 12px;
+  }
+
+  .package-mini-title {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+
+  .package-card h3 {
+    font-size: 1.5rem;
+    margin: 12px 0;
+  }
+
+  .price-box {
+    margin: 24px 0;
+  }
+
+  .price-box h1 {
+    font-size: 3rem;
+  }
+
+  .event-text {
+    font-size: 0.7rem;
+  }
+
+  /* Features */
+  .features {
+    margin: 24px 0;
+    padding-top: 24px;
+  }
+
+  .feature-item {
+    font-size: 0.88rem;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .feature-dot {
+    font-size: 0.75rem;
+  }
+
+  /* Button */
+  .package-btn {
+    padding: 16px;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .packages {
+    padding: 70px 1rem;
+  }
+
+  .packages-header {
+    margin-bottom: 45px;
+  }
+
+  .packages-header p {
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+  }
+
+  .packages-header h2 {
+    font-size: 1.9rem;
+    line-height: 1.1;
+  }
+
+  .packages-subtext {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .packages-container {
+    gap: 18px;
+  }
+
+  .package-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .badge {
+    top: 14px;
+    right: 14px;
+    font-size: 0.5rem;
+    padding: 4px 10px;
+  }
+
+  .package-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .price-box h1 {
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+  }
+
+  .event-text {
+    font-size: 0.65rem;
+  }
+
+  .features {
+    margin: 20px 0;
+    padding-top: 20px;
+  }
+
+  .feature-item {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .package-btn {
+    padding: 14px;
+    font-size: 0.65rem;
+    border-radius: 40px;
+  }
+}

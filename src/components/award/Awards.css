@@ -1,0 +1,270 @@
+/* =========================================================
+   OVERALL SECTION STYLING
+========================================================= */
+.award-section {
+  padding: 10rem 6%;
+  background: #05070d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* SECTION HEADER */
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header-subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 5px;
+  color: #00d2e6;
+  margin-bottom: 1rem;
+}
+
+.header-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: -2px;
+  color: #fff;
+  margin: 0;
+}
+
+.header-line {
+  width: 60px;
+  height: 2px;
+  background: #00d2e6;
+  margin: 1.5rem auto;
+}
+
+/* SLIDER CONTAINER */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* AWARD CARD WRAPPER (Modified for Single View) */
+.award-card-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 5rem 6rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.award-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.award-tag {
+  font-size: 0.65rem;
+  letter-spacing: 5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.text-highlight {
+  background: linear-gradient(135deg, #ffffff 20%, #00d2e6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accent-line {
+  height: 1px;
+  width: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 2rem auto;
+}
+
+.stars {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 8px;
+}
+
+.sub-title {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.laurel {
+  font-size: 5rem;
+  color: rgba(0, 210, 230, 0.1);
+  user-select: none;
+}
+
+/* NAVIGATION DOTS */
+.slider-dots {
+  display: flex;
+  gap: 15px;
+  margin-top: 3rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #00d2e6;
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgba(0, 210, 230, 0.5);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .award-card-wrapper {
+    padding: 4rem 2rem;
+    gap: 1rem;
+  }
+  .laurel { display: none; }
+  .header-title { font-size: 2.5rem; }
+}
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+
+  .award-section {
+    padding: 5rem 1.2rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+  }
+
+  .header-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+
+  .header-line {
+    width: 45px;
+    margin: 1rem auto;
+  }
+
+  .slider-container {
+    width: 100%;
+  }
+
+  .award-card-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .award-content {
+    width: 100%;
+  }
+
+  .award-tag {
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .accent-line {
+    width: 60px;
+    margin: 1.5rem auto;
+  }
+
+  .stars {
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .sub-title {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+
+  .laurel {
+    display: none;
+  }
+
+  .slider-dots {
+    margin-top: 2rem;
+    gap: 12px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  .award-section {
+    padding: 4rem 1rem;
+  }
+
+  .award-card-wrapper {
+    padding: 2.5rem 1rem;
+  }
+
+  .header-title {
+    font-size: 1.7rem;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .stars {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  .sub-title {
+    font-size: 0.6rem;
+  }
+}
