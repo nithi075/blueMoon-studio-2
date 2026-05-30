@@ -54,7 +54,7 @@ const Hero = () => {
             transition={{ delay: 1.1 }} 
             className="hero-buttons"
         >
-          <a href="#showreel" className="hero-btn">Watch Showreel</a>
+          <a href="#portfolio" className="hero-btn">Watch Showreel</a>
           <a href="#contact" className="hero-btn outline">Book a Project</a>
         </motion.div>
       </motion.div>
