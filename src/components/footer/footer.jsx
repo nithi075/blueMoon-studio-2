@@ -267,17 +267,7 @@ const Footer = () => {
 
           </p>
 
-          <p className="developer-credit">
-
-            Crafted by
-
-            <span className="dev-name">
-
-              {" "}SAM Web Designing
-
-            </span>
-
-          </p>
+         
 
         </div>
 

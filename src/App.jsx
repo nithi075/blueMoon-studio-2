@@ -15,6 +15,7 @@ import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Awards from "./components/award/Awards";
 import BrandBanner from "./components/banner/Banner";
+import FloatingChat from "./components/floating/floating";
 
 function HomePage() {
   return (
@@ -66,6 +67,7 @@ function HomePage() {
       <section id="location">
         <Location />
       </section>
+      <FloatingChat/>
 
       <Footer />
     </>

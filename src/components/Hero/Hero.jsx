@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
-import video from "../../assets/video2.mp4";
+import video from "../../assets/hero.mp4";
 
 const Hero = () => {
   return (
