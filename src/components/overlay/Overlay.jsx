@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./overlay.css";
+import "./Overlay.css";
 
 export default function Overlay({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
