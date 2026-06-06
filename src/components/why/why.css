@@ -1,0 +1,405 @@
+/* =========================================================
+WHY CHOOSE US
+========================================================= */
+
+.why-section {
+  position: relative;
+  overflow: hidden;
+
+  background: #05070d;
+
+  padding: 8rem 6%;
+}
+
+/* =========================================================
+GRAIN
+========================================================= */
+
+.why-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: url("/grain.png");
+
+  opacity: 0.03;
+
+  mix-blend-mode: soft-light;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+AMBIENT GLOW
+========================================================= */
+
+.why-section::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 210, 230, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.03),
+      transparent 30%
+    );
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.why-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================================================
+SUBTITLE
+========================================================= */
+
+.section-subtitle {
+  width: fit-content;
+
+  padding-bottom: 0.8rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  margin-bottom: 2rem;
+}
+
+/* =========================================================
+ACCENT LINE
+========================================================= */
+
+.accent-line {
+  width: 90px;
+  height: 1px;
+
+  margin-bottom: 2.5rem;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 210, 230, 0.9),
+    transparent
+  );
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.section-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  line-height: 1;
+  font-weight: 300;
+
+  letter-spacing: -3px;
+
+  color: #fff;
+
+  margin-bottom: 1.5rem;
+
+  max-width: 900px;
+}
+
+.text-highlight {
+  background: linear-gradient(
+    135deg,
+    #ffffff 20%,
+    #00d2e6 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.why-description {
+  max-width: 700px;
+
+  font-size: 1rem;
+  font-weight: 300;
+
+  line-height: 2;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  margin-bottom: 4rem;
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.why-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.why-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 2rem;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.why-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 210, 230, 0.12),
+    transparent 50%
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.why-card:hover::before {
+  opacity: 1;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(0, 210, 230, 0.25);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+.why-card h3 {
+  position: relative;
+  z-index: 2;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  color: #fff;
+
+  margin-bottom: 1rem;
+}
+
+.why-card p {
+  position: relative;
+  z-index: 2;
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 4rem;
+  }
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .why-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.3rem, 12vw, 3.6rem);
+
+    letter-spacing: -2px;
+  }
+
+  .why-description {
+    font-size: 0.92rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 2.5rem;
+  }
+
+  .why-card {
+    padding: 1.5rem;
+  }
+
+  .why-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .why-card p {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-section {
+    padding: 5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .why-description {
+    font-size: 0.88rem;
+  }
+}
+/* =========================================================
+   EXTRA MOBILE OPTIMIZATION
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .why-section {
+    padding: 4.5rem 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .accent-line {
+    width: 60px;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.3rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+
+  .why-description {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  .why-grid {
+    gap: 12px;
+  }
+
+  .why-card {
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+
+  .why-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .why-card p {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES (320px - 375px)
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .why-description {
+    font-size: 0.75rem;
+  }
+
+  .why-card {
+    padding: 1rem;
+  }
+
+  .why-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .why-card p {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+}

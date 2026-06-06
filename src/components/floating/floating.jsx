@@ -3,17 +3,27 @@ import "./floating.css";
 import Overlay from "../overlay/Overlay";
 
 export default function FloatingChat() {
-
-  const [isOpen, setIsOpen] = useState(false);
+  const [modalType, setModalType] = useState(null);
 
   return (
     <>
       <div className="floating-container">
+        {/* Dropdown Menu */}
+        {modalType === 'menu' && (
+          <div className="floating-menu">
+            <button onClick={() => setModalType('project')}>Book a Project</button>
+            <button onClick={() => setModalType('appointment')}>Book an Appointment</button>
+          </div>
+        )}
 
+        {/* Main Floating Button */}
         <button
           className="floating-chat-glass"
-          onClick={() => setIsOpen(true)}
+          onClick={() => setModalType(modalType === 'menu' ? null : 'menu')}
         >
+          {/* Ambient Glow Inside Button to avoid flex breakdown */}
+          <div className="floating-glow"></div>
+          
           <div className="icon-wrapper">
             <svg viewBox="0 0 24 24" className="whatsapp-svg">
               <path
@@ -23,17 +33,14 @@ export default function FloatingChat() {
             </svg>
           </div>
 
-          <span className="chat-label">
-            Inquire Now
-          </span>
+          <span className="chat-label">Inquire Now</span>
         </button>
-
-        <div className="floating-glow"></div>
       </div>
 
       <Overlay
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
+        type={modalType !== 'menu' ? modalType : null}
+        isOpen={modalType !== null && modalType !== 'menu'}
+        onClose={() => setModalType(null)}
       />
     </>
   );

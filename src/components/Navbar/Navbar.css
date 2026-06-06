@@ -274,3 +274,104 @@
     font-size: 0.65rem;
   }
 }
+/* =========================================
+   EXTRA MOBILE NAVBAR OPTIMIZATION
+========================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 0.9rem 1rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-wrapper {
+    min-height: 48px;
+  }
+
+  .nav-logo img {
+    width: 48px;
+    height: auto;
+  }
+
+  .menu-trigger {
+    gap: 4px;
+  }
+
+  .menu-trigger span {
+    width: 20px;
+    height: 1.8px;
+  }
+
+  .mobile-nav-overlay {
+    padding: 1rem;
+  }
+
+  .mobile-nav-content {
+    gap: 1.2rem;
+  }
+
+  .mobile-nav-content a {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+
+  .close-trigger {
+    top: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .trigger-text {
+    font-size: 0.45rem;
+    letter-spacing: 1px;
+  }
+
+  .trigger-icon {
+    width: 14px;
+    height: 14px;
+    font-size: 0.55rem;
+  }
+}
+
+/* =========================================
+   VERY SMALL DEVICES (320px - 375px)
+========================================= */
+
+@media (max-width: 375px) {
+
+  .nav-logo img {
+    width: 44px;
+  }
+
+  .menu-trigger span {
+    width: 18px;
+  }
+
+  .mobile-nav-content {
+    gap: 1rem;
+  }
+
+  .mobile-nav-content a {
+    font-size: 1rem;
+  }
+
+  .close-trigger {
+    padding: 6px 10px;
+  }
+
+  .trigger-text {
+    display: none;
+  }
+
+  .trigger-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+  }
+}

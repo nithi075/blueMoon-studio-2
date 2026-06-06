@@ -1,0 +1,381 @@
+/* =========================================================
+BTS SECTION
+========================================================= */
+
+.bts-section {
+  position: relative;
+  overflow: hidden;
+
+  background: #05070d;
+
+  padding: 8rem 6%;
+}
+
+/* =========================================================
+GRAIN
+========================================================= */
+
+.bts-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: url("/grain.png");
+
+  opacity: 0.03;
+
+  mix-blend-mode: soft-light;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+AMBIENT GLOW
+========================================================= */
+
+.bts-section::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 210, 230, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.03),
+      transparent 30%
+    );
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.bts-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================================================
+SUBTITLE
+========================================================= */
+
+.section-subtitle {
+  width: fit-content;
+
+  padding-bottom: 0.8rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  margin-bottom: 2rem;
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.section-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  line-height: 1;
+  font-weight: 300;
+
+  letter-spacing: -3px;
+
+  color: #fff;
+
+  margin-bottom: 1.5rem;
+}
+
+.text-highlight {
+  background: linear-gradient(
+    135deg,
+    #ffffff 20%,
+    #00d2e6 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.bts-description {
+  max-width: 700px;
+
+  font-size: 1rem;
+  font-weight: 300;
+
+  line-height: 2;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  margin-bottom: 4rem;
+}
+
+/* =========================================================
+VIDEO WRAPPER
+========================================================= */
+
+.bts-video-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 1100px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.02);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 20px 60px rgba(0, 0, 0, 0.4);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.bts-video-wrapper:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(0, 210, 230, 0.25);
+
+  box-shadow:
+    0 0 40px rgba(0, 210, 230, 0.08),
+    0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================================================
+VIDEO
+========================================================= */
+
+.bts-video-wrapper video {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+OPTIONAL INFO STATS
+========================================================= */
+
+.bts-info {
+  width: 100%;
+  max-width: 900px;
+
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.bts-info h3 {
+  font-size: 2rem;
+  font-weight: 300;
+
+  color: #fff;
+
+  margin-bottom: 0.5rem;
+}
+
+.bts-info p {
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 4rem;
+  }
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .bts-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.3rem, 12vw, 3.6rem);
+
+    letter-spacing: -2px;
+  }
+
+  .bts-description {
+    font-size: 0.92rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 2.5rem;
+  }
+
+  .bts-video-wrapper {
+    border-radius: 18px;
+  }
+
+  .bts-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .bts-info h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bts-section {
+    padding: 5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .bts-description {
+    font-size: 0.88rem;
+  }
+
+  .bts-video-wrapper {
+    border-radius: 16px;
+  }
+}
+/* =========================================================
+   EXTRA MOBILE OPTIMIZATION
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .bts-section {
+    padding: 4.5rem 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.3rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+
+  .bts-description {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  .bts-video-wrapper {
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .bts-video-wrapper video {
+    min-height: 220px;
+    object-fit: cover;
+  }
+
+  .bts-info {
+    margin-top: 2rem;
+    gap: 1.2rem;
+  }
+
+  .bts-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .bts-info p {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES (320px - 375px)
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .bts-description {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .bts-video-wrapper {
+    border-radius: 12px;
+  }
+
+  .bts-video-wrapper video {
+    min-height: 190px;
+  }
+
+  .bts-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .bts-info p {
+    font-size: 0.6rem;
+  }
+}

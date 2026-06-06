@@ -1,524 +1,184 @@
 /* ==========================================
    OVERLAY BACKDROP
 ========================================== */
-
 .overlay-backdrop {
   position: fixed;
   inset: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: rgba(5, 7, 13, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-
   z-index: 99999;
-
   padding: 2rem;
-
   animation: fadeIn .4s ease;
 }
 
 /* ==========================================
-   MODAL
+   MODAL CONTAINER
 ========================================== */
-
 .overlay-modal {
   position: relative;
-
   width: min(900px, 100%);
   max-height: 90vh;
-
   overflow-y: auto;
-
-  background: rgba(255,255,255,.04);
-
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  border: 1px solid rgba(255,255,255,.08);
-
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 30px;
-
   padding: 3rem;
-
-  box-shadow:
-    0 0 60px rgba(0,210,230,.08),
-    0 25px 80px rgba(0,0,0,.4);
-
-  animation: modalEnter .5s cubic-bezier(.22,1,.36,1);
+  box-shadow: 0 0 60px rgba(0, 210, 230, 0.08), 0 25px 80px rgba(0, 0, 0, 0.4);
+  animation: modalEnter .5s cubic-bezier(.22, 1, .36, 1);
 }
-
-/* ==========================================
-   CYAN GLOW
-========================================== */
 
 .overlay-modal::before {
   content: "";
-
   position: absolute;
-
   width: 350px;
   height: 350px;
-
   top: -120px;
   right: -120px;
-
   border-radius: 50%;
-
-  background: rgba(0,210,230,.12);
-
+  background: rgba(0, 210, 230, 0.12);
   filter: blur(100px);
-
   pointer-events: none;
 }
 
 /* ==========================================
    CLOSE BUTTON
 ========================================== */
-
 .overlay-close {
   position: absolute;
-
   top: 20px;
   right: 20px;
-
   width: 42px;
   height: 42px;
-
   border-radius: 50%;
-
-  border: 1px solid rgba(255,255,255,.08);
-
-  background: rgba(255,255,255,.04);
-
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   color: #fff;
-
   cursor: pointer;
-
   transition: .35s ease;
 }
 
 .overlay-close:hover {
   transform: rotate(90deg);
-
-  border-color: rgba(0,210,230,.3);
-
-  box-shadow:
-    0 0 25px rgba(0,210,230,.15);
+  border-color: rgba(0, 210, 230, 0.3);
+  box-shadow: 0 0 25px rgba(0, 210, 230, 0.15);
 }
 
 /* ==========================================
    HEADER
 ========================================== */
-
-.overlay-header {
-  margin-bottom: 2.5rem;
-}
+.overlay-header { margin-bottom: 2.5rem; }
 
 .overlay-subtitle {
   display: inline-block;
-
   color: #00d2e6;
-
   font-size: .75rem;
-
   letter-spacing: 3px;
-
   text-transform: uppercase;
-
   margin-bottom: 1rem;
 }
 
 .overlay-header h2 {
   color: #fff;
-
   font-size: clamp(2rem, 4vw, 3rem);
-
   margin-bottom: 1rem;
-
   font-weight: 600;
 }
 
-.overlay-header p {
-  color: rgba(255,255,255,.6);
-
-  line-height: 1.8;
-
-  max-width: 600px;
-}
-
 /* ==========================================
-   FORM
+   FORM ELEMENTS
 ========================================== */
+.overlay-form { display: grid; gap: 1.4rem; }
 
-.overlay-form {
-  display: grid;
-  gap: 1.4rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
+.form-group { display: flex; flex-direction: column; }
 
 .form-group label {
-  color: rgba(255,255,255,.75);
-
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: .7rem;
-
   font-size: .85rem;
-
   letter-spacing: .5px;
 }
-
-/* ==========================================
-   INPUTS
-========================================== */
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-
   width: 100%;
-
   padding: 1rem 1.1rem;
-
   border-radius: 16px;
-
-  border: 1px solid rgba(255,255,255,.08);
-
-  background: rgba(255,255,255,.03);
-
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
   color: #fff;
-
   outline: none;
-
   transition: .35s ease;
-
   font-size: .95rem;
 }
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: rgba(255,255,255,.35);
-}
-
-/* ==========================================
-   FOCUS
-========================================== */
+.form-group textarea { resize: vertical; min-height: 120px; }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-
-  border-color: rgba(0,210,230,.35);
-
-  box-shadow:
-    0 0 0 4px rgba(0,210,230,.08);
+  border-color: rgba(0, 210, 230, 0.35);
+  box-shadow: 0 0 0 4px rgba(0, 210, 230, 0.08);
 }
 
 /* ==========================================
    SUBMIT BUTTON
 ========================================== */
-
 .submit-btn {
-
   margin-top: 1rem;
-
   border: none;
-
   cursor: pointer;
-
   padding: 1rem 1.5rem;
-
   border-radius: 999px;
-
-  background: linear-gradient(
-    135deg,
-    #00d2e6,
-    #00a8ba
-  );
-
+  background: linear-gradient(135deg, #00d2e6, #00a8ba);
   color: #05070d;
-
   font-size: .8rem;
-
   font-weight: 700;
-
   letter-spacing: 2px;
-
   text-transform: uppercase;
-
-  transition: all .4s cubic-bezier(.22,1,.36,1);
+  transition: all .4s cubic-bezier(.22, 1, .36, 1);
 }
 
 .submit-btn:hover {
-
   transform: translateY(-3px);
-
-  box-shadow:
-    0 15px 40px rgba(0,210,230,.25);
+  box-shadow: 0 15px 40px rgba(0, 210, 230, 0.25);
 }
 
 /* ==========================================
-   SCROLLBAR
+   SCROLLBAR & ANIMATIONS
 ========================================== */
+.overlay-modal::-webkit-scrollbar { width: 8px; }
+.overlay-modal::-webkit-scrollbar-thumb { background: rgba(0, 210, 230, 0.3); border-radius: 999px; }
 
-.overlay-modal::-webkit-scrollbar {
-  width: 8px;
-}
-
-.overlay-modal::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.overlay-modal::-webkit-scrollbar-thumb {
-  background: rgba(0,210,230,.3);
-  border-radius: 999px;
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalEnter { from { opacity: 0; transform: translateY(30px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes mobileSlideUp { from { opacity: 0; transform: translateY(100%); } to { opacity: 1; transform: translateY(0); } }
 
 /* ==========================================
-   ANIMATIONS
+   MOBILE RESPONSIVE
 ========================================== */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes modalEnter {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* ==========================================
-   MOBILE
-========================================== */
-
 @media (max-width: 768px) {
-
-  .overlay-backdrop {
-    padding: 1rem;
-  }
-
+  .overlay-backdrop { padding: 12px; align-items: flex-end; }
+  
   .overlay-modal {
-
-    max-height: 95vh;
-
-    padding:
-      1.5rem
-      1.2rem;
-
-    border-radius: 24px;
-  }
-
-  .overlay-header h2 {
-    font-size: 1.8rem;
-  }
-
-  .overlay-header p {
-    font-size: .9rem;
-  }
-
-  .submit-btn {
     width: 100%;
-  }
-
-}
-/* ==========================================
-   MOBILE OPTIMIZED
-========================================== */
-
-@media (max-width: 768px) {
-
-  .overlay-backdrop{
-    padding: 12px;
-    align-items: flex-end;
-  }
-
-  .overlay-modal{
-
-    width: 100%;
-
-    max-width: 100%;
-
     max-height: 92vh;
-
     border-radius: 24px 24px 0 0;
-
     padding: 1.5rem 1rem;
-
-    overflow-y: auto;
-
     animation: mobileSlideUp .4s ease;
   }
 
-  .overlay-modal::before{
-
-    width: 220px;
-    height: 220px;
-
-    top: -80px;
-    right: -80px;
-  }
-
-  .overlay-close{
-
-    top: 12px;
-    right: 12px;
-
-    width: 38px;
-    height: 38px;
-
-    font-size: 14px;
-  }
-
-  .overlay-header{
-
-    margin-bottom: 1.5rem;
-
-    padding-right: 40px;
-  }
-
-  .overlay-subtitle{
-
-    font-size: .65rem;
-
-    letter-spacing: 2px;
-  }
-
-  .overlay-header h2{
-
-    font-size: 1.5rem;
-
-    line-height: 1.2;
-
-    margin-bottom: .75rem;
-  }
-
-  .overlay-header p{
-
-    font-size: .85rem;
-
-    line-height: 1.7;
-  }
-
-  .overlay-form{
-
-    gap: 1rem;
-  }
-
-  .form-group label{
-
-    font-size: .78rem;
-
-    margin-bottom: .5rem;
-  }
-
+  .overlay-modal::before { width: 220px; height: 220px; top: -80px; right: -80px; }
+  .overlay-header h2 { font-size: 1.5rem; }
+  
   .form-group input,
   .form-group textarea,
-  .form-group select{
+  .form-group select { font-size: 16px; padding: 1rem; border-radius: 14px; }
 
-    padding: .9rem 1rem;
-
-    font-size: 16px; /* iOS zoom fix */
-
-    border-radius: 14px;
-  }
-
-  .form-group textarea{
-
-    min-height: 100px;
-  }
-
-  .submit-btn{
-
-    width: 100%;
-
-    padding: 1rem;
-
-    font-size: .75rem;
-
-    margin-top: .5rem;
-  }
-
-}
-
-/* ==========================================
-   SMALL MOBILE
-========================================== */
-
-@media (max-width: 480px){
-
-  .overlay-backdrop{
-    padding: 8px;
-  }
-
-  .overlay-modal{
-
-    padding: 1.25rem .9rem;
-
-    border-radius: 20px 20px 0 0;
-  }
-
-  .overlay-header h2{
-
-    font-size: 1.3rem;
-  }
-
-  .overlay-header p{
-
-    font-size: .8rem;
-  }
-
-  .form-group label{
-
-    font-size: .72rem;
-  }
-
-  .submit-btn{
-
-    letter-spacing: 1px;
-
-    font-size: .7rem;
-  }
-
-}
-
-/* ==========================================
-   MOBILE ANIMATION
-========================================== */
-
-@keyframes mobileSlideUp{
-
-  from{
-    opacity:0;
-    transform:translateY(100%);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-
+  .submit-btn { width: 100%; padding: 1rem; }
 }

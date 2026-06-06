@@ -3,50 +3,117 @@ import { motion } from "framer-motion";
 import "./Packages.css";
 
 const packagesData = [
-  { title: "Starter Presence", subtitle: "SOCIAL-FIRST CONTENT", price: "₹39K", features: ["Creative Direction", "1 Cinematic Shoot Day", "4 Edited Reels", "Premium Color Grading"] },
-  { title: "Brand Accelerator", subtitle: "HIGH-GROWTH PACKAGE", price: "₹79K", badge: "MOST POPULAR", features: ["Multi-Camera Production", "8 Premium Reels", "Monthly Content Strategy", "Luxury Cinematic Editing", "Priority Delivery"] },
-  { title: "Signature Identity", subtitle: "FULL CREATIVE EXPERIENCE", price: "₹129K", features: ["Full Brand Content System", "Luxury Production Workflow", "Drone & Cinematic Coverage", "Campaign Creative Direction", "Priority Creative Support"] }
+{
+title: "Growth Package",
+subtitle: "CLOTHING & SAREE BRANDS",
+price: "₹2 LAKHS",
+features: [
+"2 Months Content Retainer",
+"12 Premium Reels",
+"Creative Direction",
+"Professional Model Shoots",
+"Luxury Color Grading",
+"Social Media Optimization",
+"Suitable For Clothing & Saree Brands",
+],
+},
+{
+title: "Annual Brand Dominance",
+subtitle: "CLOTHING & SAREE BRANDS",
+price: "₹10 LAKHS",
+badge: "MOST POPULAR",
+features: [
+"12 Months Content Retainer",
+"72+ Premium Reels",
+"Festival Campaign Coverage",
+"Cinematic Brand Films",
+"Monthly Strategy Planning",
+"Priority Production Support",
+"Suitable For Clothing & Saree Brands",
+],
+},
 ];
 
 export default function Packages() {
-  return (
-    <section className="packages" id="packages">
-      <div className="packages-bg-text">PRICING</div>
-      
-      <div className="packages-header">
-        <p>CREATIVE PARTNERSHIPS</p>
-        <h2>Designed For <span>Modern Brands</span></h2>
-        <span className="packages-subtext">Social-first content systems crafted for brands built to dominate attention.</span>
-      </div>
+return ( <section className="packages" id="packages"> <div className="packages-bg-text">
+PRICING </div>
 
-      <div className="packages-container">
-        {packagesData.map((item, index) => (
-          <motion.div key={index} className={`package-card ${item.badge ? "featured" : ""}`} whileHover={{ y: -10 }}>
-            {item.badge && <div className="badge">{item.badge}</div>}
-            
-            <div className="package-top">
-              <span className="package-mini-title">{item.subtitle}</span>
-              <h3>{item.title}</h3>
-            </div>
 
-            <div className="price-box">
-              <h1>{item.price}</h1>
-              <span className="event-text">/per project</span>
-            </div>
+  <div className="packages-header">
+    <p>CONTENT RETAINER PLANS</p>
 
-            <div className="features">
-              {item.features.map((feature, i) => (
-                <div key={i} className="feature-item">
-                  <span className="feature-dot">✦</span>
-                  <p>{feature}</p>
-                </div>
-              ))}
-            </div>
+    <h2>
+      Built For{" "}
+      <span>Fashion Brands</span>
+    </h2>
 
-            <button className="package-btn">Choose Plan ↗</button>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
+    <span className="packages-subtext">
+      Premium reel production and content
+      systems designed for clothing stores,
+      saree brands, boutiques and fashion
+      businesses looking to dominate social
+      media attention.
+    </span>
+  </div>
+
+  <div className="packages-container">
+    {packagesData.map((item, index) => (
+      <motion.div
+        key={index}
+        className={`package-card ${
+          item.badge ? "featured" : ""
+        }`}
+        whileHover={{ y: -10 }}
+      >
+        {item.badge && (
+          <div className="badge">
+            {item.badge}
+          </div>
+        )}
+
+        <div className="package-top">
+          <span className="package-mini-title">
+            {item.subtitle}
+          </span>
+
+          <h3>{item.title}</h3>
+        </div>
+
+        <div className="price-box">
+          <h1>{item.price}</h1>
+
+          <span className="event-text">
+            {item.price === "₹10 LAKHS"
+              ? "/per year"
+              : "/2 months"}
+          </span>
+        </div>
+
+        <div className="features">
+          {item.features.map(
+            (feature, i) => (
+              <div
+                key={i}
+                className="feature-item"
+              >
+                <span className="feature-dot">
+                  ✦
+                </span>
+
+                <p>{feature}</p>
+              </div>
+            )
+          )}
+        </div>
+
+        <button className="package-btn">
+          Get Started ↗
+        </button>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+
+);
 }

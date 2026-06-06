@@ -4,61 +4,53 @@
   right: 40px;
   z-index: 9999;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
 }
 
+/* Main Floating Glass Button */
 .floating-chat-glass {
+  position: relative; /* Glow structure damage aagama iruka */
   display: flex;
   align-items: center;
-
-  /* Footer Theme */
+  justify-content: flex-start;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   border: 1px solid rgba(255, 255, 255, 0.06);
-
   padding: 12px;
   border-radius: 60px;
-  text-decoration: none;
+  cursor: pointer;
   color: #fff;
-
   transition: all 0.5s cubic-bezier(.22,1,.36,1);
-
   overflow: hidden;
-  max-width: 55px;
-
-  box-shadow:
-    0 0 30px rgba(0, 210, 230, 0.05);
+  
+  /* Initial State: Only Circle Icon Shows */
+  width: 55px; 
+  height: 55px;
+  box-shadow: 0 0 30px rgba(0, 210, 230, 0.05);
 }
 
-/* Hover */
+/* Hover State - Width Expands Smothly */
 .floating-chat-glass:hover {
-  max-width: 220px;
+  width: 220px; /* Max-width ku badhala width stretch aagum */
   padding: 12px 25px;
-
   background: rgba(255,255,255,0.06);
-
   border-color: rgba(0,210,230,0.22);
-
-  box-shadow:
-    0 0 40px rgba(0,210,230,0.12);
-
+  box-shadow: 0 0 40px rgba(0,210,230,0.12);
   transform: translateY(-3px);
 }
 
 .icon-wrapper {
   min-width: 30px;
   height: 30px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: #00d2e6; /* Cyan Accent */
-
   transition: transform .5s ease;
+  z-index: 2;
 }
 
 .whatsapp-svg {
@@ -69,20 +61,15 @@
 .chat-label {
   font-size: .75rem;
   font-weight: 500;
-
   text-transform: uppercase;
   letter-spacing: 2px;
-
   margin-left: 15px;
-
   color: #fff;
-
   white-space: nowrap;
-
   opacity: 0;
   transform: translateX(10px);
-
   transition: all .4s ease;
+  z-index: 2;
 }
 
 .floating-chat-glass:hover .chat-label {
@@ -94,36 +81,76 @@
   transform: rotate(360deg);
 }
 
-/* Ambient Cyan Glow */
-.floating-glow {
-  position: absolute;
-
-  width: 60px;
-  height: 60px;
-
-  background: #00d2e6;
-
-  filter: blur(40px);
-
-  opacity: .18;
-
-  z-index: -1;
-  border-radius: 50%;
+/* Dropdown Menu Above Icon */
+.floating-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(10, 10, 15, 0.75); /* Slight dark tone for high contrast visibility */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s cubic-bezier(.22,1,.36,1);
+  z-index: 10;
 }
 
-@media (max-width: 768px) {
+.floating-menu button {
+  background: transparent;
+  border: none;
+  color: #eee;
+  padding: 10px 18px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  text-align: left;
+}
 
+.floating-menu button:hover {
+  background: rgba(0, 210, 230, 0.15);
+  color: #00d2e6;
+  transform: translateX(3px);
+}
+
+/* Ambient Glow Fix inside button */
+.floating-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #00d2e6;
+  filter: blur(35px);
+  opacity: .25;
+  z-index: 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
   .floating-container {
     bottom: 25px;
     right: 25px;
   }
-
   .floating-chat-glass {
-    max-width: 55px;
+    width: 55px;
+    height: 55px;
   }
-
   .floating-chat-glass:active {
-    max-width: 180px;
+    width: 190px;
   }
-
 }

@@ -16,6 +16,8 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Awards from "./components/award/Awards";
 import BrandBanner from "./components/banner/Banner";
 import FloatingChat from "./components/floating/floating";
+import WhyChooseUs from "./components/why/why";
+import BTS from "./components/bts/bts";
 
 function HomePage() {
   return (
@@ -47,6 +49,9 @@ function HomePage() {
    <section id="featured">
         <Featured />
       </section> 
+
+      <WhyChooseUs />
+      <BTS  />
     
 
       <section id="packages">
@@ -55,15 +60,15 @@ function HomePage() {
         <section id="instagram">
         <Instagram />
       </section>
-
+{/* 
       <section id="contact">
         <Contact />
-      </section>
+      </section> */}
 
-    
+{/*     
     <section id="banner">
       <BrandBanner/>
-    </section>
+    </section> */}
       <section id="location">
         <Location />
       </section>
