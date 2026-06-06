@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./overlay.css";
-import { useState } from "react";
+
 import "./Overlay.css";
 
 export default function Overlay({ isOpen, onClose, type }) {
