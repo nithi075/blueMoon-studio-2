@@ -5,7 +5,7 @@ import "./Hero.css";
 // Import both videos
 import videoDesktop from "../../assets/video1.mp4";
 import videoMobile from "../../assets/hero.mp4"; // Ensure this file exists
-import Overlay from "../Overlay/Overlay";
+import Overlay from "../overlay/Overlay";
 
 const awards = [
   { title: "BEST AD BACKGROUND SCORE ", stars: "★★★", sub: "AD PLUS CONTEST-2023" },
