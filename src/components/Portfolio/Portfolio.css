@@ -512,3 +512,7 @@
     height: 38px;
   }
 }
+/* Portfolio.css-la add pannikonga */
+.portfolio-section {
+  scroll-margin-top: 80px; /* Header-ku mela space iruntha ithu correct-a align pannum */
+}

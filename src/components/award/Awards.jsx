@@ -5,15 +5,15 @@ import "./Awards.css";
 const awardsData = [
   {
     tag: "PRESENTED BY ANNUAL FILM ACADEMY GALA 2024",
-    title: "BEST BACKGROUND SCORE",
+    title: "BEST AD BACKGROUND SCORE",
     stars: "★★★",
-    sub: "WINNER OF THE SEASON",
+    sub: "AD PLUS CONTEST-2023",
   },
   {
     tag: "OFFICIAL SELECTION",
-    title: "BEST CINEMATOGRAPHY",
+    title: "BEST AD FILM",
     stars: "★★★★★",
-    sub: "WINNER FOR VISUAL EXCELLENCE",
+    sub: "AD PLUS CONTEST-2023",
   },
 ];
 

@@ -8,8 +8,8 @@ import videoMobile from "../../assets/hero.mp4"; // Ensure this file exists
 import Overlay from "../Overlay/Overlay";
 
 const awards = [
-  { title: "BEST BACKGROUND SCORE", stars: "★★★", sub: "WINNER OF THE SEASON" },
-  { title: "BEST CINEMATOGRAPHY", stars: "★★★★★", sub: "WINNER FOR VISUAL EXCELLENCE" },
+  { title: "BEST AD BACKGROUND SCORE ", stars: "★★★", sub: "AD PLUS CONTEST-2023" },
+  { title: "BEST AD FILM ", stars: "★★★★★", sub: "AD PLUS CONTEST-2023" },
 ];
 
 const Hero = () => {

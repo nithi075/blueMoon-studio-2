@@ -1,61 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./bts.css";
-import btsVideo from "../../assets/hero.mp4";
+
+import Bts1 from "../../assets/hero.mp4";
+import Bts2 from "../../assets/bts2.mp4";
+import Bts3 from "../../assets/bts3.mp4";
+
+const btsVideos = [
+  { id: 1, src: Bts1, title: "Fashion Setup" },
+  { id: 2, src: Bts2, title: "Studio Lighting" },
+  { id: 3, src: Bts3, title: "Creative Process" }
+];
 
 const BTS = () => {
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
   return (
     <section className="bts-section" id="bts">
       <div className="bts-container">
-        <motion.span
-          className="section-subtitle"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+
+        <span className="section-subtitle">
           BEHIND THE SCENES
-        </motion.span>
+        </span>
 
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          The Process Behind
-          <span className="text-highlight">
-            {" "}The Magic
-          </span>
-        </motion.h2>
+        <h2 className="section-title">
+          The Process Behind <br />
+          <span className="text-highlight">The Magic</span>
+        </h2>
 
-        <motion.p
-          className="bts-description"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Every cinematic frame begins with
-          creativity, collaboration, and attention
-          to detail. Take a look behind the scenes
-          of how we bring ideas to life.
-        </motion.p>
+        <p className="bts-description">
+          Every cinematic frame begins with creativity,
+          collaboration, and attention to detail.
+        </p>
 
-        <motion.div
-          className="bts-video-wrapper"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <video
-            src={btsVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-          />
-        </motion.div>
+        <div className="bts-gallery">
+          {btsVideos.map((video) => (
+            <motion.div
+              key={video.id}
+              className="bts-video-wrapper"
+              whileHover={{ scale: 1.03 }}
+              onClick={() => setSelectedVideo(video.src)}
+            >
+              <video
+                src={video.src}
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* FULLSCREEN OVERLAY */}
+        {selectedVideo && (
+          <div
+            className="video-modal"
+            onClick={() => setSelectedVideo(null)}
+          >
+            <div
+              className="video-modal-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="close-btn"
+                onClick={() => setSelectedVideo(null)}
+              >
+                ✕
+              </button>
+
+              <video
+                src={selectedVideo}
+                controls
+                autoPlay
+                playsInline
+              />
+            </div>
+          </div>
+        )}
+
       </div>
     </section>
   );

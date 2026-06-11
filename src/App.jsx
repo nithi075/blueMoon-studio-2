@@ -27,9 +27,7 @@ function HomePage() {
       <section id="home">
         <Hero />
       </section>
-        <section id="awards">
-        <Awards/>
-      </section>
+     
 
         <section id="portfolio">
         <Portfolio />
@@ -43,6 +41,9 @@ function HomePage() {
 
       <section id="about">
         <About />
+      </section>
+         <section id="awards">
+        <Awards/>
       </section>
 
     

@@ -5,9 +5,7 @@ BTS SECTION
 .bts-section {
   position: relative;
   overflow: hidden;
-
   background: #05070d;
-
   padding: 8rem 6%;
 }
 
@@ -17,16 +15,11 @@ GRAIN
 
 .bts-section::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background: url("/grain.png");
-
   opacity: 0.03;
-
   mix-blend-mode: soft-light;
-
   pointer-events: none;
   z-index: 0;
 }
@@ -37,10 +30,8 @@ AMBIENT GLOW
 
 .bts-section::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background:
     radial-gradient(
       circle at 20% 20%,
@@ -52,7 +43,6 @@ AMBIENT GLOW
       rgba(255, 255, 255, 0.03),
       transparent 30%
     );
-
   pointer-events: none;
   z-index: 0;
 }
@@ -64,10 +54,8 @@ CONTAINER
 .bts-container {
   position: relative;
   z-index: 2;
-
   max-width: 1200px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,19 +68,13 @@ SUBTITLE
 
 .section-subtitle {
   width: fit-content;
-
   padding-bottom: 0.8rem;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-
   font-size: 0.72rem;
   font-weight: 500;
-
   letter-spacing: 4px;
   text-transform: uppercase;
-
   color: rgba(255, 255, 255, 0.8);
-
   margin-bottom: 2rem;
 }
 
@@ -102,14 +84,10 @@ TITLE
 
 .section-title {
   font-size: clamp(3rem, 6vw, 5.5rem);
-
   line-height: 1;
   font-weight: 300;
-
   letter-spacing: -3px;
-
   color: #fff;
-
   margin-bottom: 1.5rem;
 }
 
@@ -122,7 +100,6 @@ TITLE
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   display: inline-block;
 }
 
@@ -132,15 +109,26 @@ DESCRIPTION
 
 .bts-description {
   max-width: 700px;
-
   font-size: 1rem;
   font-weight: 300;
-
   line-height: 2;
-
   color: rgba(255, 255, 255, 0.55);
-
   margin-bottom: 4rem;
+}
+
+/* =========================================================
+GALLERY
+========================================================= */
+
+.bts-gallery {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 /* =========================================================
@@ -149,14 +137,10 @@ VIDEO WRAPPER
 
 .bts-video-wrapper {
   position: relative;
-
   width: 100%;
-  max-width: 1100px;
-
   overflow: hidden;
 
   border-radius: 24px;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
 
   background: rgba(255, 255, 255, 0.02);
@@ -187,15 +171,13 @@ VIDEO
 
 .bts-video-wrapper video {
   display: block;
-
   width: 100%;
-  height: auto;
-
+  height: 100%;
   object-fit: cover;
 }
 
 /* =========================================================
-OPTIONAL INFO STATS
+OPTIONAL INFO
 ========================================================= */
 
 .bts-info {
@@ -212,18 +194,14 @@ OPTIONAL INFO STATS
 .bts-info h3 {
   font-size: 2rem;
   font-weight: 300;
-
   color: #fff;
-
   margin-bottom: 0.5rem;
 }
 
 .bts-info p {
   font-size: 0.75rem;
-
   text-transform: uppercase;
   letter-spacing: 2px;
-
   color: rgba(255, 255, 255, 0.55);
 }
 
@@ -235,6 +213,11 @@ TABLET
   .section-title {
     font-size: 4rem;
   }
+
+  .bts-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }
 
 /* =========================================================
@@ -242,26 +225,35 @@ MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
+
   .bts-section {
-    padding: 6rem 1.5rem;
+    padding: 5rem 1rem;
   }
 
   .section-title {
-    font-size: clamp(2.3rem, 12vw, 3.6rem);
-
-    letter-spacing: -2px;
+    font-size: clamp(2rem, 8vw, 3rem);
+    letter-spacing: -1px;
   }
 
   .bts-description {
-    font-size: 0.92rem;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
 
-    line-height: 1.9;
-
-    margin-bottom: 2.5rem;
+  /* 3 VIDEOS IN A ROW */
+  .bts-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
   }
 
   .bts-video-wrapper {
-    border-radius: 18px;
+    border-radius: 10px;
+  }
+
+  .bts-video-wrapper video {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
   }
 
   .bts-info {
@@ -270,89 +262,28 @@ MOBILE
   }
 
   .bts-info h3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .bts-section {
-    padding: 5rem 1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .bts-description {
-    font-size: 0.88rem;
-  }
-
-  .bts-video-wrapper {
-    border-radius: 16px;
-  }
-}
-/* =========================================================
-   EXTRA MOBILE OPTIMIZATION
-========================================================= */
-
-@media (max-width: 480px) {
-
-  .bts-section {
-    padding: 4.5rem 1rem;
-  }
-
-  .section-subtitle {
-    font-size: 0.55rem;
-    letter-spacing: 2px;
-    padding-bottom: 0.6rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .section-title {
-    font-size: clamp(1.8rem, 8vw, 2.3rem);
-    line-height: 1.15;
-    letter-spacing: -1px;
-    margin-bottom: 1rem;
-  }
-
-  .bts-description {
-    font-size: 0.82rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    max-width: 100%;
-  }
-
-  .bts-video-wrapper {
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  .bts-video-wrapper video {
-    min-height: 220px;
-    object-fit: cover;
-  }
-
-  .bts-info {
-    margin-top: 2rem;
-    gap: 1.2rem;
-  }
-
-  .bts-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .bts-info p {
-    font-size: 0.65rem;
-    letter-spacing: 1px;
+    font-size: 1.4rem;
   }
 }
 
 /* =========================================================
-   VERY SMALL DEVICES (320px - 375px)
+VERY SMALL DEVICES
 ========================================================= */
 
 @media (max-width: 375px) {
+
+  .bts-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+
+  .bts-video-wrapper {
+    border-radius: 8px;
+  }
+
+  .bts-video-wrapper video {
+    aspect-ratio: 9 / 16;
+  }
 
   .section-title {
     font-size: 1.7rem;
@@ -360,22 +291,69 @@ MOBILE
 
   .bts-description {
     font-size: 0.75rem;
-    line-height: 1.6;
   }
+}
+/* ==========================================
+VIDEO MODAL
+========================================== */
 
-  .bts-video-wrapper {
-    border-radius: 12px;
-  }
+.video-modal {
+  position: fixed;
+  inset: 0;
 
-  .bts-video-wrapper video {
-    min-height: 190px;
-  }
+  background: rgba(0, 0, 0, 0.92);
 
-  .bts-info h3 {
-    font-size: 1.1rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .bts-info p {
-    font-size: 0.6rem;
-  }
+  z-index: 9999;
+
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.video-modal-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 1000px;
+}
+
+.video-modal-content video {
+  width: 100%;
+  max-height: 90vh;
+
+  border-radius: 16px;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+
+  top: -50px;
+  right: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  color: white;
+  background: rgba(255,255,255,0.15);
+
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.bts-video-wrapper {
+  cursor: pointer;
 }
