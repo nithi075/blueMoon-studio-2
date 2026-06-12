@@ -32,19 +32,19 @@ const WhyChooseUs = () => {
 
   const features = [
     {
-      title: "Cinematic Quality",
+      title: "Cinematic Production",
       description:
-        "Premium visuals crafted to elevate your brand and capture attention.",
+        "High-end visuals that make your brand impossible to ignore.",
     },
     {
-      title: "Fast Delivery",
+      title: "Seamless Turnaround",
       description:
-        "Quick turnaround times without compromising creativity or quality.",
+        "Fast, efficient workflows with uncompromising standards.",
     },
     {
-      title: "Creative Strategy",
+      title: "Creative Intelligence",
       description:
-        "Content designed to connect with audiences and drive results.",
+        "Strategic content designed for meaningful audience connection.",
     },
   ];
 
@@ -74,9 +74,9 @@ const WhyChooseUs = () => {
             variants={itemVariants}
             className="section-title"
           >
-            Built For Brands That
+            Creating Content That
             <span className="text-highlight">
-              {" "}Want Impact
+              {" "}Moves Brands Forward
             </span>
           </motion.h2>
 
@@ -84,10 +84,10 @@ const WhyChooseUs = () => {
             variants={itemVariants}
             className="why-description"
           >
-            We combine cinematic storytelling,
-            creative strategy, and fast execution
-            to create content that connects,
-            performs, and leaves a lasting impression.
+            We transform ideas into cinematic content
+            that captivates audiences, strengthens
+            brand presence, and creates lasting
+            impressions.
           </motion.p>
 
           <motion.div

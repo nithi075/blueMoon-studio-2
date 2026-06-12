@@ -62,12 +62,23 @@ const Hero = () => {
           </motion.div>
 
           <motion.h1 className="hero-title" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5 }}>
-            We Capture <span className="gradient-text">Visual Poetry</span><br /> Beyond Ordinary Frames.
+            Creating <span className="gradient-text">Success</span><br /> Growing Together.
           </motion.h1>
 
-          <motion.div className="hero-quote" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}>
-            <p>"A man who stops advertising to save money is like a man who stops a clock to save time."</p>
-          </motion.div>
+         <motion.div
+  className="hero-quote"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.8, duration: 1 }}
+>
+  <p>
+    "A man who stops advertising to save money is like a man who stops a clock to save time."
+  </p>
+
+  <span className="quote-author">
+    — Henry Ford
+  </span>
+</motion.div>
 
           <motion.div className="hero-buttons" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.1 }}>
             <a href="#portfolio" className="hero-btn">Watch Showreel</a>

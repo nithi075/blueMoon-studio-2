@@ -145,10 +145,10 @@ const Portfolio = () => {
           <div className="portfolio-top">
             <div className="portfolio-heading">
               <span className="portfolio-label">FEATURED PROJECTS</span>
-              <h2 className="portfolio-title">Cinematic <br /><span>Visual Poetry.</span></h2>
+              <h2 className="portfolio-title">Crafting <br /><span>Visual Excellence.</span></h2>
             </div>
             <div className="portfolio-right-content">
-              <p>Premium videography and luxury visuals crafted with cinematic storytelling.</p>
+              <p>Premium videography and creative storytelling designed to elevate brands and inspire audiences.✨</p>
               <div className="portfolio-filter-wrapper" ref={filterWrapperRef}>
                 {categories.map((cat) => (
                   <button

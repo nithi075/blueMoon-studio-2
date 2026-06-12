@@ -9,7 +9,7 @@ import Bts3 from "../../assets/bts3.mp4";
 const btsVideos = [
   { id: 1, src: Bts1, title: "Fashion Setup" },
   { id: 2, src: Bts2, title: "Studio Lighting" },
-  { id: 3, src: Bts3, title: "Creative Process" }
+  { id: 3, src: Bts3, title: "Creative Process" },
 ];
 
 const BTS = () => {
@@ -18,26 +18,46 @@ const BTS = () => {
   return (
     <section className="bts-section" id="bts">
       <div className="bts-container">
-
-        <span className="section-subtitle">
+        <motion.span
+          className="section-subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
           BEHIND THE SCENES
-        </span>
+        </motion.span>
 
-        <h2 className="section-title">
-          The Process Behind <br />
-          <span className="text-highlight">The Magic</span>
-        </h2>
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Behind Every <br />
+          <span className="text-highlight">
+            Great Story
+          </span>
+        </motion.h2>
 
-        <p className="bts-description">
-          Every cinematic frame begins with creativity,
-          collaboration, and attention to detail.
-        </p>
+        <motion.p
+          className="bts-description"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          An inside look at the creative process
+          that shapes compelling visual narratives.
+        </motion.p>
 
         <div className="bts-gallery">
           {btsVideos.map((video) => (
             <motion.div
               key={video.id}
               className="bts-video-wrapper"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
               whileHover={{ scale: 1.03 }}
               onClick={() => setSelectedVideo(video.src)}
             >
@@ -52,16 +72,10 @@ const BTS = () => {
           ))}
         </div>
 
-        {/* FULLSCREEN OVERLAY */}
+        {/* VIDEO MODAL */}
         {selectedVideo && (
-          <div
-            className="video-modal"
-            onClick={() => setSelectedVideo(null)}
-          >
-            <div
-              className="video-modal-content"
-              onClick={(e) => e.stopPropagation()}
-            >
+          <div className="video-modal">
+            <div className="video-modal-content">
               <button
                 className="close-btn"
                 onClick={() => setSelectedVideo(null)}
@@ -78,7 +92,6 @@ const BTS = () => {
             </div>
           </div>
         )}
-
       </div>
     </section>
   );

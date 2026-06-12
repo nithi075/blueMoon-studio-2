@@ -227,3 +227,31 @@
     font-size: 10px;
   }
 }
+.portfolio-description {
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .portfolio-description {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-description {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+}
