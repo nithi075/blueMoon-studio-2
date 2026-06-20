@@ -18,6 +18,7 @@ import BrandBanner from "./components/banner/Banner";
 import FloatingChat from "./components/floating/floating";
 import WhyChooseUs from "./components/why/why";
 import BTS from "./components/bts/bts";
+import Services from "./components/Services/services";
 
 function HomePage() {
   return (
@@ -32,10 +33,8 @@ function HomePage() {
         <section id="portfolio">
         <Portfolio />
       </section>
-{/* 
-      <section id="services">
-        <Services />
-      </section> */}
+
+
 
     
 
@@ -52,6 +51,9 @@ function HomePage() {
       </section> 
 
       <WhyChooseUs />
+            <section id="services">
+        <Services />
+      </section>
       <BTS  />
     
 

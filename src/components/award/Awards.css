@@ -1,17 +1,17 @@
+css
 /* =========================================================
-   OVERALL SECTION STYLING
+   AWARDS SECTION
 ========================================================= */
+
 .award-section {
   padding: 10rem 6%;
   background: #05070d;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   position: relative;
 }
 
-/* SECTION HEADER */
 .section-header {
   text-align: center;
   margin-bottom: 5rem;
@@ -39,7 +39,10 @@
   margin: 1.5rem auto;
 }
 
-/* SLIDER CONTAINER */
+/* =========================================================
+   SLIDER
+========================================================= */
+
 .slider-container {
   position: relative;
   width: 100%;
@@ -49,19 +52,28 @@
   align-items: center;
 }
 
-/* AWARD CARD WRAPPER (Modified for Single View) */
 .award-card-wrapper {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
+  width: 100%;
   padding: 5rem 6rem;
+
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(15px);
-  width: 100%;
-  justify-content: center;
+
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.award-card-wrapper:active {
+  cursor: grabbing;
 }
 
 .award-content {
@@ -80,21 +92,26 @@
 .main-title {
   font-size: clamp(1.8rem, 5vw, 3.5rem);
   font-weight: 700;
-  letter-spacing: -1px;
-  margin: 0;
-  text-transform: uppercase;
   line-height: 1.1;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .text-highlight {
-  background: linear-gradient(135deg, #ffffff 20%, #00d2e6 100%);
+  background: linear-gradient(
+    135deg,
+    #ffffff 20%,
+    #00d2e6 100%
+  );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .accent-line {
-  height: 1px;
   width: 100px;
+  height: 1px;
   background: rgba(255, 255, 255, 0.2);
   margin: 2rem auto;
 }
@@ -102,8 +119,8 @@
 .stars {
   font-size: 1.5rem;
   color: #ffd700;
-  margin-bottom: 1.5rem;
   letter-spacing: 8px;
+  margin-bottom: 1.5rem;
 }
 
 .sub-title {
@@ -111,7 +128,6 @@
   letter-spacing: 4px;
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
-  margin: 0;
 }
 
 .laurel {
@@ -120,7 +136,49 @@
   user-select: none;
 }
 
-/* NAVIGATION DOTS */
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  background: rgba(255,255,255,0.08);
+}
+
+.left-arrow {
+  left: -90px;
+}
+
+.right-arrow {
+  right: -90px;
+}
+
+/* =========================================================
+   DOTS
+========================================================= */
+
 .slider-dots {
   display: flex;
   gap: 15px;
@@ -130,30 +188,45 @@
 .dot {
   width: 8px;
   height: 8px;
-  background: rgba(255, 255, 255, 0.2);
+
   border-radius: 50%;
   cursor: pointer;
+
+  background: rgba(255,255,255,0.2);
   transition: all 0.3s ease;
 }
 
 .dot.active {
   background: #00d2e6;
   transform: scale(1.5);
-  box-shadow: 0 0 10px rgba(0, 210, 230, 0.5);
+  box-shadow: 0 0 10px rgba(0,210,230,0.5);
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .award-card-wrapper {
-    padding: 4rem 2rem;
-    gap: 1rem;
-  }
-  .laurel { display: none; }
-  .header-title { font-size: 2.5rem; }
-}
 /* =========================================================
-   MOBILE RESPONSIVE
+   TABLET
 ========================================================= */
+
+@media (max-width: 992px) {
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+
+  .slider-arrow {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
 
   .award-section {
@@ -171,17 +244,6 @@
 
   .header-title {
     font-size: 2rem;
-    line-height: 1.2;
-    letter-spacing: -1px;
-  }
-
-  .header-line {
-    width: 45px;
-    margin: 1rem auto;
-  }
-
-  .slider-container {
-    width: 100%;
   }
 
   .award-card-wrapper {
@@ -189,39 +251,29 @@
     gap: 1.5rem;
     padding: 3rem 1.5rem;
     border-radius: 20px;
-    text-align: center;
-  }
-
-  .award-content {
-    width: 100%;
   }
 
   .award-tag {
     font-size: 0.55rem;
     letter-spacing: 3px;
-    margin-bottom: 1rem;
   }
 
   .main-title {
     font-size: 1.8rem;
-    line-height: 1.2;
   }
 
   .accent-line {
     width: 60px;
-    margin: 1.5rem auto;
   }
 
   .stars {
     font-size: 1.1rem;
     letter-spacing: 5px;
-    margin-bottom: 1rem;
   }
 
   .sub-title {
     font-size: 0.65rem;
     letter-spacing: 2px;
-    line-height: 1.5;
   }
 
   .laurel {
@@ -230,17 +282,13 @@
 
   .slider-dots {
     margin-top: 2rem;
-    gap: 12px;
-  }
-
-  .dot {
-    width: 7px;
-    height: 7px;
   }
 }
 
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-/* EXTRA SMALL DEVICES */
 @media (max-width: 480px) {
 
   .award-section {
@@ -268,122 +316,4 @@
     font-size: 0.6rem;
   }
 }
-/* =========================================================
-   MOBILE RESPONSIVE (TABLETS & SMARTPHONES)
-========================================================= */
-@media (max-width: 768px) {
-  .award-section {
-    padding: 5rem 1.2rem;
-  }
 
-  .section-header {
-    margin-bottom: 3rem;
-  }
-
-  .header-subtitle {
-    font-size: 0.6rem;
-    letter-spacing: 3px;
-  }
-
-  .header-title {
-    font-size: 2rem;
-    line-height: 1.2;
-    letter-spacing: -1px;
-  }
-
-  .header-line {
-    width: 45px;
-    margin: 1rem auto;
-  }
-
-  .slider-container {
-    width: 100%;
-  }
-
-  .award-card-wrapper {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 3rem 1.5rem;
-    border-radius: 20px;
-    text-align: center;
-  }
-
-  .award-content {
-    width: 100%;
-  }
-
-  .award-tag {
-    font-size: 0.55rem;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
-  }
-
-  .main-title {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  .accent-line {
-    width: 60px;
-    margin: 1.5rem auto;
-  }
-
-  .stars {
-    font-size: 1.1rem;
-    letter-spacing: 5px;
-    margin-bottom: 1rem;
-  }
-
-  .sub-title {
-    font-size: 0.65rem;
-    letter-spacing: 2px;
-    line-height: 1.5;
-  }
-
-  /* Laurel elements overlapping thaduka hidden */
-  .laurel {
-    display: none !important;
-  }
-
-  .slider-dots {
-    margin-top: 2rem;
-    gap: 12px;
-  }
-
-  .dot {
-    width: 7px;
-    height: 7px;
-  }
-}
-
-/* =========================================================
-   EXTRA SMALL DEVICES (PORTRAIT PHONES)
-========================================================= */
-@media (max-width: 480px) {
-  .award-section {
-    padding: 4rem 1rem;
-  }
-
-  .award-card-wrapper {
-    padding: 2.5rem 1rem;
-    border-radius: 16px;
-  }
-
-  .header-title {
-    font-size: 1.7rem;
-  }
-
-  .main-title {
-    font-size: 1.5rem;
-  }
-
-  .stars {
-    font-size: 1rem;
-    letter-spacing: 4px;
-  }
-
-  .sub-title {
-    font-size: 0.6rem;
-    letter-spacing: 1.5px;
-  }
-}

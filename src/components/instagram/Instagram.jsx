@@ -27,7 +27,7 @@ export default function Instagram() {
       {/* Header */}
       <div className="insta-header">
         <span className="insta-tag">SOCIAL-FIRST STORYTELLING</span>
-        <h2>Built For <span>Attention.</span></h2>
+        <h2>Elevating Brand <span> Perception</span></h2>
       </div>
 
       {/* Main Content Layout */}

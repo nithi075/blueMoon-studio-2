@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Awards.css";
@@ -6,7 +7,7 @@ const awardsData = [
   {
     tag: "PRESENTED BY ANNUAL FILM ACADEMY GALA 2024",
     title: "BEST AD BACKGROUND SCORE",
-    stars: "★★★",
+    stars: "★★★★★",
     sub: "AD PLUS CONTEST-2023",
   },
   {
@@ -20,63 +21,154 @@ const awardsData = [
 const Award = () => {
   const [index, setIndex] = useState(0);
 
-  // 20 Seconds Auto Slide Logic
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 1) % awardsData.length);
+  };
+
+  const prevSlide = () => {
+    setIndex(
+      (prev) =>
+        (prev - 1 + awardsData.length) %
+        awardsData.length
+    );
+  };
+
+  // Auto Slide
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % awardsData.length);
-    }, 20000); // 20 Seconds
+      nextSlide();
+    }, 20000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
     <section className="award-section">
-      {/* Overall Section Title */}
+      {/* Header */}
       <div className="section-header">
-        <p className="header-subtitle">ACCOLADES & RECOGNITION</p>
-        <h2 className="header-title">PROUD MOMENTS</h2>
+        <p className="header-subtitle">
+          ACCOLADES & RECOGNITION
+        </p>
+
+        <h2 className="header-title">
+          PROUD MOMENTS
+        </h2>
+
         <div className="header-line"></div>
       </div>
 
       <div className="slider-container">
+
+        {/* Previous */}
+        <button
+          className="slider-arrow left-arrow"
+          onClick={prevSlide}
+          aria-label="Previous"
+        >
+          ←
+        </button>
+
+        {/* Next */}
+        <button
+          className="slider-arrow right-arrow"
+          onClick={nextSlide}
+          aria-label="Next"
+        >
+          →
+        </button>
+
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
             className="award-card-wrapper"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+
+            drag="x"
+            dragConstraints={{
+              left: 0,
+              right: 0,
+            }}
+            dragElastic={0.15}
+
+            onDragEnd={(event, info) => {
+              if (info.offset.x < -100) {
+                nextSlide();
+              }
+
+              if (info.offset.x > 100) {
+                prevSlide();
+              }
+            }}
+
+            initial={{
+              opacity: 0,
+              x: 100,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            exit={{
+              opacity: 0,
+              x: -100,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
           >
-            <div className="laurel left">❧</div>
-            
-            <div className="award-content">
-              <p className="award-tag">{awardsData[index].tag}</p>
-              <h2 className="main-title">
-                <span className="text-highlight">{awardsData[index].title}</span>
-              </h2>
-              <div className="accent-line"></div>
-              <div className="stars">{awardsData[index].stars}</div>
-              <p className="sub-title">{awardsData[index].sub}</p>
+            <div className="laurel left">
+              ❧
             </div>
 
-            <div className="laurel right">☙</div>
+            <div className="award-content">
+              <p className="award-tag">
+                {awardsData[index].tag}
+              </p>
+
+              <h2 className="main-title">
+                <span className="text-highlight">
+                  {awardsData[index].title}
+                </span>
+              </h2>
+
+              <div className="accent-line"></div>
+
+              <div className="stars">
+                {awardsData[index].stars}
+              </div>
+
+              <p className="sub-title">
+                {awardsData[index].sub}
+              </p>
+            </div>
+
+            <div className="laurel right">
+              ☙
+            </div>
           </motion.div>
         </AnimatePresence>
 
-        {/* Slider Navigation Dots (Optional - visual indicators) */}
+        {/* Dots */}
         <div className="slider-dots">
           {awardsData.map((_, i) => (
-            <div 
-              key={i} 
-              className={`dot ${i === index ? "active" : ""}`}
-              onClick={() => setIndex(i)}
-            ></div>
+            <div
+              key={i}
+              className={`dot ${
+                i === index
+                  ? "active"
+                  : ""
+              }`}
+              onClick={() =>
+                setIndex(i)
+              }
+            />
           ))}
         </div>
+
       </div>
     </section>
   );
 };
 
 export default Award;
+
