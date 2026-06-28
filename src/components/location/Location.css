@@ -78,24 +78,25 @@ TAG
 ========================================================= */
 
 .location-tag {
-width: fit-content;
+  width: fit-content;
 
-padding-bottom: .8rem;
+  padding-bottom: .8rem;
 
-border-bottom:
-1px solid rgba(255,255,255,.16);
+  border-bottom: 1px solid rgba(255,255,255,.16);
 
-font-size: .75rem;
-font-weight: 500;
+  font-family: var(--body-font);
 
-letter-spacing: 4px;
+  font-size: .72rem;
 
-text-transform: uppercase;
+  font-weight: 500;
 
-color:
-rgba(255,255,255,.82);
+  letter-spacing: 4px;
 
-margin-bottom: 2rem;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,.8);
+
+  margin-bottom: 2rem;
 }
 
 /* =========================================================
@@ -103,64 +104,76 @@ TITLE
 ========================================================= */
 
 .location-title {
-font-size:
-clamp(3rem,6vw,6rem);
 
-font-weight: 300;
+  font-family: var(--heading-font);
 
-line-height: 1.08;
+  font-size: clamp(3rem,6vw,6.5rem);
 
-letter-spacing: -2px;
+  line-height: .98;
 
-color: #fff;
+  font-weight: 300;
 
-margin-bottom: 2rem;
+  letter-spacing: -3px;
+
+  color:#fff;
+
+  margin-bottom:2rem;
+
+  max-width:900px;
 }
 
-.location-title span {
-background:
-linear-gradient(
-135deg,
-#ffffff 20%,
-#00d2e6 100%
-);
+.location-title span{
 
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: linear-gradient(
+      135deg,
+      #ffffff 20%,
+      #00d2e6 100%
+  );
 
-display: inline-block;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  display:inline-block;
 }
-
 /* =========================================================
 DESCRIPTION
 ========================================================= */
 
-.location-text {
-max-width: 760px;
+.location-text{
 
-font-size: 1rem;
-font-weight: 300;
+  font-family: var(--body-font);
 
-line-height: 2;
+  max-width:750px;
 
-letter-spacing: .4px;
+  font-size:1rem;
 
-color:
-rgba(255,255,255,.58);
+  font-weight:300;
 
-margin-bottom: 4rem;
+  line-height:2;
+
+  letter-spacing:.3px;
+
+  color:rgba(255,255,255,.55);
+
+  margin:0 auto 4rem;
+
+  text-align:center;
 }
+.location-text strong{
 
-.location-text strong {
-display: block;
+  display:block;
 
-margin-bottom: 1rem;
+  font-family:var(--body-font);
 
-color: #fff;
+  font-size:1rem;
 
-font-weight: 500;
+  font-weight:600;
 
-letter-spacing: 1px;
+  color:#fff;
+
+  margin-bottom:1rem;
+
+  letter-spacing:1px;
 }
 
 /* =========================================================
@@ -322,21 +335,23 @@ MOBILE
 padding: 6rem 1.5rem;
 }
 
-.location-tag {
-font-size: .68rem;
-letter-spacing: 3px;
+.location-tag{
+    font-size:.64rem;
+    letter-spacing:3px;
 }
 
-.location-title {
-font-size: 2.5rem;
-line-height: 1.2;
+.location-title{
+    font-size:clamp(2.3rem,12vw,3.6rem);
+    letter-spacing:-2px;
+    line-height:1;
 }
 
-.location-text {
-font-size: .92rem;
-line-height: 1.9;
-margin-bottom: 3rem;
+.location-text{
+    font-size:.92rem;
+    line-height:1.9;
 }
+
+
 
 .map-container-frame {
 height: 320px;
@@ -359,12 +374,14 @@ SMALL MOBILE
 padding: 5rem 1rem;
 }
 
-.location-title {
-font-size: 2rem;
+.location-title{
+    font-size:2.2rem;
+    letter-spacing:-1px;
 }
 
-.location-text {
-font-size: .85rem;
+.location-text{
+    font-size:.85rem;
+    line-height:1.7;
 }
 
 .map-container-frame {

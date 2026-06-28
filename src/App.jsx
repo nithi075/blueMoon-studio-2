@@ -19,6 +19,7 @@ import FloatingChat from "./components/floating/floating";
 import WhyChooseUs from "./components/why/why";
 import BTS from "./components/bts/bts";
 import Services from "./components/Services/services";
+import Team from "./components/Team/Team";
 
 function HomePage() {
   return (
@@ -55,6 +56,7 @@ function HomePage() {
         <Services />
       </section>
       <BTS  />
+      <Team/>
     
 
       <section id="packages">

@@ -5,9 +5,10 @@
 .portfolio-section {
   position: relative;
   overflow: hidden;
-  padding: 120px 5%;
+  padding: 8rem 6%; /* Synced with why-section */
   background: radial-gradient(circle at top, #10131d 0%, #05070d 60%);
   color: #fff;
+  scroll-margin-top: 80px;
 }
 
 /* =========================================
@@ -16,7 +17,7 @@
 
 .portfolio-container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px; /* Synced with why-container */
   margin: 0 auto;
 }
 
@@ -29,45 +30,79 @@
   grid-template-columns: 1fr 420px;
   align-items: end;
   gap: 5rem;
-  margin-bottom: 90px;
+  margin-bottom: 4rem; /* Modern spacing */
 }
 
 .portfolio-label {
   display: block;
-  margin-bottom: 22px;
-  color: #00d2e6;
+  width: fit-content;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+
+  font-family: var(--body-font);
   font-size: 0.72rem;
   font-weight: 500;
+
   letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,.8);
+
+  margin-bottom: 2rem;
 }
 
 .portfolio-title {
-  margin: 0;
-  font-size: clamp(3.5rem, 7vw, 6.2rem);
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -2px;
-}
+  font-family: var(--heading-font);
 
-.portfolio-title span {
-  color: rgba(255,255,255,0.28);
-}
+  font-size: clamp(3rem, 6vw, 6.5rem);
 
-/* RIGHT CONTENT */
+  line-height: 0.98;
+
+  font-weight: 300;
+
+  letter-spacing: -3px;
+
+  color: #fff;
+
+  margin-bottom: 2rem;
+
+  max-width: 900px;
+}
+.portfolio-title span{
+  background: linear-gradient(
+      135deg,
+      #ffffff 20%,
+      #00d2e6 100%
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  display:inline-block;
+}
+/* RIGHT CONTENT / DESCRIPTION */
 
 .portfolio-right-content {
   width: 100%;
   overflow: hidden;
 }
 
-.portfolio-right-content p {
-  max-width: 420px;
-  margin-bottom: 30px;
-  color: rgba(255,255,255,0.68);
-  font-size: 0.95rem;
-  font-weight: 300;
-  line-height: 1.9;
-  letter-spacing: 0.3px;
+.portfolio-right-content p{
+  font-family: var(--body-font);
+
+  max-width:750px;
+
+  font-size:1rem;
+
+  font-weight:300;
+
+  line-height:2;
+
+  letter-spacing:.3px;
+
+  color:rgba(255,255,255,.55);
+
+  margin-bottom:0;
 }
 
 /* =========================================
@@ -210,8 +245,9 @@
 
 .p-card-info h3 {
   margin: 0;
-  font-size: 1.55rem;
-  line-height: 1.1;
+  font-size: 1.2rem; /* Matches Why Choose Us card titles */
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .p-card-info p {
@@ -256,13 +292,17 @@
 
 @media (max-width: 992px) {
   .portfolio-section {
-    padding: 90px 2rem;
+    padding: 8rem 2rem; /* Using consistent rem units */
   }
 
   .portfolio-top {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     margin-bottom: 60px;
+  }
+
+  .portfolio-title {
+    font-size: 4rem; /* Synced with tablet title layout */
   }
 
   .portfolio-right-content p {
@@ -290,7 +330,7 @@
 
 @media (max-width: 768px) {
   .portfolio-section {
-    padding: 75px 1rem;
+    padding: 6rem 1.5rem; /* Synced padding */
   }
 
   .portfolio-top {
@@ -301,20 +341,20 @@
 
   .portfolio-label {
     margin-bottom: 14px;
-    font-size: 0.58rem;
+    font-size: 0.72rem; /* Maintained readability */
     letter-spacing: 3px;
   }
 
   .portfolio-title {
-    font-size: 2.35rem;
-    line-height: 1;
+    font-size: clamp(2.3rem, 12vw, 3.6rem); /* Synced typography clamp */
+    letter-spacing: -2px;
   }
 
   .portfolio-right-content p {
     max-width: 100%;
     margin-bottom: 24px;
-    font-size: 0.84rem;
-    line-height: 1.7;
+    font-size: 0.92rem;
+    line-height: 1.9; /* Synced description line-height */
   }
 
   /* FILTERS */
@@ -352,7 +392,7 @@
 
   .p-card.horizontal,
   .p-card.vertical {
-    height: 220px; /* Reduced height for 2 in a row look */
+    height: 220px;
   }
 
   .p-video-box {
@@ -362,7 +402,7 @@
   /* MOBILE OVERLAY VISIBILITY */
   .p-card-overlay {
     opacity: 1; 
-    padding: 12px; /* Small adjustments for fit */
+    padding: 12px;
   }
 
   .p-card-meta {
@@ -370,13 +410,13 @@
   }
 
   .p-card-info h3 {
-    font-size: 0.95rem; /* Text size reduced for 2 columns */
+    font-size: 1.05rem; /* Synced mobile card heading font size */
     line-height: 1.2;
   }
 
   .p-card-info p {
     margin: 4px 0 10px;
-    font-size: 0.68rem;
+    font-size: 0.88rem; /* Synced mobile card text */
   }
 
   .view-btn {
@@ -386,29 +426,44 @@
 }
 
 /* =========================================
-   6. SMALL MOBILE (480px) - UPDATED FOR 2 IN A ROW
+   6. SMALL MOBILE (480px)
 ========================================= */
 
 @media (max-width: 480px) {
 
   .portfolio-section {
-    padding: 65px 0.7rem;
+    padding: 4.5rem 1rem; /* Synced 480px section padding */
+  }
+
+  .portfolio-label {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
   }
 
   .portfolio-title {
-    font-size: 1.95rem;
+    font-size: clamp(1.8rem, 8vw, 2.3rem); /* Synced 480px title typography */
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
   }
 
-  /* Kept 2 columns even in small mobiles */
+  .portfolio-right-content p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
   .portfolio-grid {
     grid-template-columns: 1fr 1fr; 
-    gap: 10px; 
+    gap: 12px; 
   }
 
   .p-card.horizontal,
   .p-card.vertical {
-    height: 180px; /* Smaller height to prevent portrait-stretching */
-    border-radius: 16px; /* Slightly smaller radius for small cards */
+    height: 180px;
+    border-radius: 16px; /* Synced card border-radius */
   }
 
   .p-video-box {
@@ -421,18 +476,41 @@
   }
   
   .p-card-info h3 {
-    font-size: 0.85rem; /* Compact title size to fit within small column */
+    font-size: 0.95rem; /* Synced compact card titles */
   }
   
   .p-card-info p {
     margin: 2px 0 8px;
-    font-size: 0.62rem;
+    font-size: 0.78rem; /* Synced compact card details */
   }
   
   .view-btn {
     padding: 4px 8px;
     font-size: 0.52rem;
     gap: 4px;
+  }
+}
+
+/* =========================================
+   7. VERY SMALL DEVICES (375px)
+========================================= */
+
+@media (max-width: 375px) {
+
+  .portfolio-title {
+    font-size: 1.7rem; /* Synced 375px extreme compression */
+  }
+
+  .portfolio-right-content p {
+    font-size: 0.75rem;
+  }
+
+  .p-card-info h3 {
+    font-size: 0.9rem;
+  }
+  
+  .p-card-info p {
+    font-size: 0.72rem;
   }
 }
 
@@ -511,8 +589,4 @@
     width: 38px;
     height: 38px;
   }
-}
-/* Portfolio.css-la add pannikonga */
-.portfolio-section {
-  scroll-margin-top: 80px; /* Header-ku mela space iruntha ithu correct-a align pannum */
 }

@@ -2,22 +2,24 @@
    PREMIUM LUXURY TYPOGRAPHY SYSTEM
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap');
 :root {
 
   /* =========================================
      FONT SYSTEM
      ========================================= */
 
-  /* Luxury Editorial Serif */
-  --heading-font: "Cormorant Garamond", serif;
+  /* =========================================
+   FONT SYSTEM
+   ========================================= */
 
-  /* Signature Accent */
-  --accent-font: "Great Vibes", cursive;
+--heading-font: "Syne", sans-serif;
 
-  /* Modern Premium Body */
-  --body-font: "Inter", sans-serif;
+/* Accent */
+--accent-font: "Syne", sans-serif;
+
+/* Body */
+--body-font: "Inter", sans-serif;
 
   /* =========================================
      COLORS
@@ -120,15 +122,15 @@ h6 {
 .italic-accent,
 .signature-text {
 
-  font-family: var(--accent-font);
+  font-family: var(--heading-font);
 
-  font-size: 1.6em;
+  font-size: 1.2em;
 
-  font-weight: 400;
+  font-weight: 600;
 
   color: var(--gold);
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
 
   text-transform: none;
 
@@ -136,7 +138,6 @@ h6 {
 
   line-height: 1;
 }
-
 /* ==========================================================================
    BODY CONTENT
    ========================================================================== */

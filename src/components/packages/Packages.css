@@ -65,61 +65,93 @@ HEADER
 ========================================================= */
 
 .packages-header {
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
 
-max-width: 760px;
+  max-width: 900px;
 
-margin: 0 auto 80px;
+  margin: 0 auto 80px;
 
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 }
 
 .packages-header p {
-color: #00d2e6;
 
-font-size: .75rem;
-font-weight: 600;
+  width: fit-content;
 
-letter-spacing: 4px;
+  padding-bottom: 0.8rem;
 
-text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,.16);
 
-margin-bottom: 18px;
+  font-family: var(--body-font);
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,.8);
+
+  margin-bottom: 2rem;
 }
 
 .packages-header h2 {
-font-size: clamp(2.5rem,5vw,4.8rem);
 
-line-height: .95;
+  font-family: var(--heading-font);
 
-font-weight: 300;
+  font-size: clamp(3rem, 6vw, 6.5rem);
 
-letter-spacing: -2px;
+  line-height: .98;
 
-margin-bottom: 20px;
+  font-weight: 300;
+
+  letter-spacing: -3px;
+
+  color: #fff;
+
+  margin-bottom: 2rem;
+
+  max-width: 900px;
 }
-
 .packages-header h2 span {
-background:
-linear-gradient(
-135deg,
-#ffffff,
-#00d2e6
-);
 
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    135deg,
+    #ffffff 20%,
+    #00d2e6 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
 }
 
 .packages-subtext {
-color: rgba(255,255,255,0.55);
 
-font-size: 1rem;
+  font-family: var(--body-font);
 
-line-height: 1.8;
+  max-width: 750px;
+
+  font-size: 1rem;
+
+  font-weight: 300;
+
+  line-height: 2;
+
+  letter-spacing: .3px;
+
+  color: rgba(255,255,255,.55);
+
+  margin: 0 auto;
 }
-
 /* =========================================================
 2 CARD GRID
 ========================================================= */
@@ -230,22 +262,34 @@ text-transform: uppercase;
 CONTENT
 ========================================================= */
 
-.package-mini-title {
-color: #00d2e6;
+.package-mini-title{
 
-font-size: .65rem;
+  font-family: var(--body-font);
 
-letter-spacing: 3px;
+  color:#00d2e6;
 
-text-transform: uppercase;
+  font-size:.7rem;
+
+  font-weight:500;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
 }
 
-.package-card h3 {
-margin: 15px 0;
+.package-card h3{
 
-font-size: 1.8rem;
+  font-family: var(--heading-font);
 
-font-weight: 500;
+  margin:15px 0;
+
+  font-size:2rem;
+
+  font-weight:300;
+
+  line-height:1.1;
+
+  letter-spacing:-1px;
 }
 
 /* =========================================================
@@ -256,22 +300,27 @@ PRICE
 margin: 30px 0;
 }
 
-.price-box h1 {
-font-size: 3.4rem;
+.price-box h1{
 
-font-weight: 300;
+  font-family: var(--heading-font);
 
-letter-spacing: -2px;
+  font-size:3.4rem;
+
+  font-weight:300;
+
+  letter-spacing:-2px;
 }
 
-.event-text {
-font-size: .75rem;
+.event-text{
 
-opacity: .5;
+  font-family: var(--body-font);
 
-letter-spacing: 1px;
+  font-size:.75rem;
+
+  opacity:.55;
+
+  letter-spacing:1px;
 }
-
 /* =========================================================
 FEATURES
 ========================================================= */
@@ -285,17 +334,23 @@ border-top:
 1px solid rgba(255,255,255,.1);
 }
 
-.feature-item {
-display: flex;
+.feature-item{
 
-gap: 12px;
+  display:flex;
 
-margin-bottom: 15px;
+  gap:12px;
 
-font-size: .95rem;
+  margin-bottom:15px;
 
-color:
-rgba(255,255,255,.72);
+  font-family:var(--body-font);
+
+  font-size:.95rem;
+
+  font-weight:400;
+
+  line-height:1.8;
+
+  color:rgba(255,255,255,.72);
 }
 
 .feature-dot {
@@ -308,29 +363,19 @@ font-size: .8rem;
 BUTTON
 ========================================================= */
 
-.package-btn {
-width: 100%;
+.package-btn{
 
-padding: 18px;
+  width:100%;
 
-border-radius: 999px;
+  font-family:var(--body-font);
 
-border:
-1px solid rgba(255,255,255,.2);
+  font-size:.8rem;
 
-background: transparent;
+  font-weight:600;
 
-color: #fff;
+  letter-spacing:2px;
 
-cursor: pointer;
-
-transition: .3s;
-
-font-size: .8rem;
-
-letter-spacing: 2px;
-
-text-transform: uppercase;
+  text-transform:uppercase;
 }
 
 .package-btn:hover {
@@ -356,13 +401,14 @@ display: none;
 .packages-header {
 margin-bottom: 55px;
 }
-
-.packages-header h2 {
-font-size: 2.5rem;
+.packages-header h2{
+    font-size:clamp(2.3rem,12vw,3.6rem);
+    letter-spacing:-2px;
 }
 
-.packages-subtext {
-font-size: .9rem;
+.packages-subtext{
+    font-size:.92rem;
+    line-height:1.9;
 }
 
 .packages-container {
@@ -402,12 +448,14 @@ letter-spacing: 3px;
 
 }
 
-.packages-header h2 {
-font-size: 2.2rem;
+.packages-header h2{
+    font-size:2.2rem;
+    letter-spacing:-1px;
 }
 
-.packages-subtext {
-font-size: .88rem;
+.packages-subtext{
+    font-size:.85rem;
+    line-height:1.7;
 }
 
 .package-card {
