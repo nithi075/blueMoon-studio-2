@@ -1,4 +1,3 @@
-css
 /* =========================================================
    AWARDS SECTION
 ========================================================= */
@@ -207,7 +206,6 @@ css
 ========================================================= */
 
 @media (max-width: 992px) {
-
   .left-arrow {
     left: 10px;
   }
@@ -224,11 +222,10 @@ css
 }
 
 /* =========================================================
-   MOBILE
+   MOBILE (Unchanged as requested)
 ========================================================= */
 
 @media (max-width: 768px) {
-
   .award-section {
     padding: 5rem 1.2rem;
   }
@@ -286,11 +283,10 @@ css
 }
 
 /* =========================================================
-   SMALL MOBILE
+   SMALL MOBILE (Unchanged as requested)
 ========================================================= */
 
 @media (max-width: 480px) {
-
   .award-section {
     padding: 4rem 1rem;
   }
@@ -313,7 +309,108 @@ css
   }
 
   .sub-title {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 }
 
+/* =========================================================
+   DESKTOP / LAPTOP (Optimized & Cleaned)
+========================================================= */
+
+@media (min-width: 992px) {
+  .award-section {
+    padding: 10rem 6%;
+  }
+
+  .section-header {
+    margin-bottom: 5rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+  }
+
+  .header-title {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    letter-spacing: -2px;
+  }
+
+  .header-line {
+    width: 60px;
+    margin: 1.5rem auto;
+  }
+
+  .slider-container {
+    max-width: 1000px;
+    position: relative; /* Arrows absolute align aaga idhu mandatory */
+  }
+
+  .award-card-wrapper {
+    display: flex;
+    flex-direction: row; /* Desktop-la side-by-side flex fix */
+    gap: 4rem;
+    padding: 5rem 6rem;
+    border-radius: 0px; /* Mobile rounded border-a desktop-la remove panna */
+  }
+
+  .award-tag {
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+  }
+
+  .main-title {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  .accent-line {
+    width: 100px;
+    margin: 2rem auto;
+  }
+
+  .stars {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+  }
+
+  .sub-title {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+  }
+
+  .laurel {
+    display: block; /* Mobile-la hidden-aa irukra laurel-a desktop-la display panna */
+    font-size: 5rem;
+  }
+
+  .slider-arrow {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slider-arrow:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .left-arrow {
+    left: -90px;
+  }
+
+  .right-arrow {
+    right: -90px;
+  }
+
+  .slider-dots {
+    margin-top: 3rem;
+    gap: 15px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}

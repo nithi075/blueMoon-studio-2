@@ -151,7 +151,7 @@ const About = () => {
           >
             {[
               {
-                num: "2023",
+                num: "2021",
                 label: "Founded",
               },
               {

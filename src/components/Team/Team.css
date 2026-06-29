@@ -202,32 +202,36 @@
 ========================================================= */
 
 .team-image{
-
     width:220px;
-
-    height:280px;
-
+    height:220px;
+    border-radius:50%;
     overflow:hidden;
-
     flex-shrink:0;
+    border:4px solid rgba(0,210,230,.35);
+    box-shadow:
+        0 0 0 8px rgba(255,255,255,.03),
+        0 15px 40px rgba(0,0,0,.35);
+    position:relative;
 }
 
 .team-image img{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
+    object-position:center top;
     transition:transform .6s ease;
 }
 
-.team-card:hover img{
-
+.team-card:hover .team-image img{
     transform:scale(1.08);
 }
 
+.team-card:hover .team-image{
+    border-color:#00d2e6;
+    box-shadow:
+        0 0 25px rgba(0,210,230,.35),
+        0 15px 40px rgba(0,0,0,.45);
+}
 /* =========================================================
    CONTENT
 ========================================================= */
@@ -351,13 +355,10 @@ padding:24px;
 }
 
 .team-image{
-
-width:100%;
-
-max-width:300px;
-
-height:360px;
-
+    width:180px;
+    height:180px;
+    max-width:none;
+    margin:0 auto 1.5rem;
 }
 
 .team-role{
@@ -407,9 +408,8 @@ font-size:.84rem;
 }
 
 .team-image{
-
-height:300px;
-
+    width:150px;
+    height:150px;
 }
 
 .team-content h3{

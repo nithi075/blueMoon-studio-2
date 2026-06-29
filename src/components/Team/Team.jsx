@@ -2,7 +2,7 @@ import "./Team.css";
 
 // import akash from "../../assets/akash.jpg";
 import jeganathan from "../../assets/jegan.jpg";
-// import sharath from "../../assets/sharath.jpg";
+import sharath from "../../assets/sharath.jpeg";
 import pavithra from "../../assets/pavithra.jpg";
 import vinoth from "../../assets/vinoth.jpg";
 import dravid from "../../assets/dravid.jpg";
@@ -24,13 +24,13 @@ const members = [
       "Meet Jeganathan Thangam, the Founder and Creative Director shaping our brand's visual legacy. Bringing elite cinematic expertise from the Kollywood film industry—where he served as Associate Director on major films like NOVP and Athomugam—he meticulously establishes our design standards and brand aesthetics. Today, Jeganathan mentors our creative team to translate big-screen storytelling into innovative, award-winning content for your brand.",
   },
 
-  // {
-  //   image: sharath,
-  //   name: "Sharath Dhayalan",
-  //   role: "Managing Director (MD)",
-  //   description:
-  //     "Meet Sharath Dhayalan, the powerhouse Managing Director driving the operational excellence of Bluemoon Media. Sharath masterfully bridges high-level strategy with daily execution, ensuring flawless departmental coordination and robust financial health across our entire ecosystem. A true dual-threat professional, he pairs his strict business acumen with technical mastery as a highly successful professional drone operator, lifting our aerial visuals to spectacular heights.",
-  // },
+  {
+    image: sharath,
+    name: "Sharath Dhayalan",
+    role: "Managing Director (MD)",
+    description:
+      "Meet Sharath Dhayalan, the powerhouse Managing Director driving the operational excellence of Bluemoon Media. Sharath masterfully bridges high-level strategy with daily execution, ensuring flawless departmental coordination and robust financial health across our entire ecosystem. A true dual-threat professional, he pairs his strict business acumen with technical mastery as a highly successful professional drone operator, lifting our aerial visuals to spectacular heights.",
+  },
 
   {
     image: pavithra,

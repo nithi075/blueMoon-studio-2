@@ -4,16 +4,16 @@ import "./featured.css";
 
 /* VIDEOS */
 import SareeVid from "../../assets/saree1.mp4";
-import TVVid from "../../assets/video1.mp4";
+import TVVid from "../../assets/jewel1.mp4";
 import ClothingVid from "../../assets/clothing1.mp4";
-import JewelVid from "../../assets/jewel1.mp4";
+import JewelVid from "../../assets/video1.mp4";
 
 const Featured = () => {
   const items = [
     {
       id: 1,
       title: "Small Butta Silk Sarees",
-      subtitle: "Editorial Fashion",
+      subtitle: "Luxe Studio",
       class: "item-1",
       video: SareeVid,
       type: "video",
@@ -21,7 +21,7 @@ const Featured = () => {
     {
       id: 2,
       title: "Importance of Chalk Piece",
-      subtitle: "TV Commercial",
+      subtitle: "Vishal Thangamaligai",
       class: "item-2",
       video: TVVid,
       type: "video",
@@ -29,15 +29,15 @@ const Featured = () => {
     {
       id: 3,
       title: "Anarkali Kurties Set",
-      subtitle: "Clothing Brand Reel",
+      subtitle: "Luxe Studio",
       class: "item-3",
       video: ClothingVid,
       type: "video",
     },
     {
       id: 4,
-      title: "Royal Gold Heritage",
-      subtitle: "Jewellery Collection",
+      title: "TV Commercials",
+      subtitle: "BAV School",
       class: "item-4",
       video: JewelVid,
       type: "video",

@@ -27,66 +27,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-
   margin-bottom: 80px;
-
   position: relative;
   z-index: 1;
 }
 
 .insta-tag {
   width: fit-content;
-
   padding-bottom: 0.8rem;
-
   border-bottom: 1px solid rgba(255,255,255,.16);
-
   font-family: var(--body-font);
-
   font-size: 0.72rem;
-
   font-weight: 500;
-
   letter-spacing: 4px;
-
   text-transform: uppercase;
-
   color: rgba(255,255,255,.8);
-
   margin-bottom: 2rem;
 }
+
 .insta-header h2 {
-
   font-family: var(--heading-font);
-
   font-size: clamp(3rem, 6vw, 6.5rem);
-
   line-height: 0.98;
-
   font-weight: 300;
-
   letter-spacing: -3px;
-
   color: #fff;
-
   margin: 0;
-
   max-width: 900px;
 }
-.insta-header h2 span{
 
+.insta-header h2 span {
   background: linear-gradient(
       135deg,
       #ffffff 20%,
       #00d2e6 100%
   );
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  display:inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 /* Main Layout */
@@ -141,6 +120,7 @@
   display: flex; align-items: center; justify-content: center;
   opacity: 0; transition: 0.3s;
 }
+
 .insta-card:hover .card-overlay { opacity: 1; }
 
 /* Sticky Sidebar */
@@ -154,36 +134,25 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.insta-cta-box h3{
-
+.insta-cta-box h3 {
   font-family: var(--heading-font);
-
   font-size: 2.4rem;
-
   font-weight: 300;
-
   line-height: 1.1;
-
   letter-spacing: -1px;
-
-  color:#fff;
-
-  margin-bottom:20px;
+  color: #fff;
+  margin-bottom: 20px;
 }
-.insta-cta-box p{
 
+.insta-cta-box p {
   font-family: var(--body-font);
-
-  color:rgba(255,255,255,.55);
-
-  font-size:1rem;
-
-  font-weight:300;
-
-  line-height:2;
-
-  margin-bottom:30px;
+  color: rgba(255,255,255,.55);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2;
+  margin-bottom: 30px;
 }
+
 .insta-btn {
   display: inline-block;
   padding: 15px 30px;
@@ -210,32 +179,32 @@
   .insta-masonry-grid { grid-template-columns: 1fr 1fr; }
   .insta-card.tall { height: 300px; }
   .insta-card.short { height: 200px; }
-  .insta-tag{
-  font-size:.64rem;
-  letter-spacing:3px;
+  .insta-tag {
+    font-size: .64rem;
+    letter-spacing: 3px;
+  }
+
+  .insta-header h2 {
+    font-size: clamp(2.3rem,12vw,3.6rem);
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+
+  .insta-cta-box h3 {
+    font-size: 2rem;
+  }
+
+  .insta-cta-box p {
+    font-size: .92rem;
+    line-height: 1.9;
+  }
 }
 
-.insta-header h2{
-  font-size:clamp(2.3rem,12vw,3.6rem);
-  letter-spacing:-2px;
-  line-height:1;
-}
-
-.insta-cta-box h3{
-  font-size:2rem;
-}
-
-.insta-cta-box p{
-  font-size:.92rem;
-  line-height:1.9;
-}
-}
 /* =========================================================
-   MOBILE RESPONSIVE - INSTAGRAM SECTION
+   MOBILE RESPONSIVE - INSTAGRAM SECTION (UNCHANGED)
 ========================================================= */
 
 @media (max-width: 992px) {
-
   .insta-container {
     padding: 90px 1.5rem;
   }
@@ -319,13 +288,11 @@
   }
 }
 
-
 /* =========================================================
-   SMALL MOBILE DEVICES
+   SMALL MOBILE DEVICES (UNCHANGED)
 ========================================================= */
 
 @media (max-width: 480px) {
-
   .insta-container {
     padding: 70px 1rem;
   }
@@ -338,21 +305,20 @@
     font-size: 0.55rem;
     letter-spacing: 2px;
   }
-.insta-header h2{
-  font-size:2.2rem;
-  letter-spacing:-1px;
-}
 
-.insta-cta-box h3{
-  font-size:1.7rem;
-}
+  .insta-header h2 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
 
-.insta-cta-box p{
-  font-size:.85rem;
-  line-height:1.7;
-}
+  .insta-cta-box h3 {
+    font-size: 1.7rem;
+  }
 
-
+  .insta-cta-box p {
+    font-size: .85rem;
+    line-height: 1.7;
+  }
 
   .card-tag {
     font-size: 0.5rem;
@@ -365,12 +331,33 @@
     border-radius: 20px;
   }
 
-
-
   .insta-btn {
     width: 100%;
     text-align: center;
     padding: 13px;
     font-size: 0.65rem;
+  }
+}
+
+/* =========================================================
+   DESKTOP / LAPTOP ENHANCEMENTS (992px and above)
+========================================================= */
+
+@media (min-width: 992px) {
+  .insta-main-content {
+    display: grid;
+    grid-template-columns: 1fr 380px; /* Enhanced proportional balance for wide displays */
+    gap: 48px;
+  }
+
+  .insta-masonry-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px; /* Crisp gap for precise high-res alignment */
+  }
+
+  .insta-cta-box {
+    position: sticky;
+    top: 120px; /* Fluid typography offset layout preservation */
+    padding: 50px;
   }
 }

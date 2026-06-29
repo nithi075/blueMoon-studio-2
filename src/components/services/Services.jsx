@@ -5,13 +5,16 @@ const services = [
   "Premium Reel Production",
   "Fashion Campaign Shoots",
   "Creative Direction",
-  "Content Strategy",
+  "Social Media Strategy ",
   "Photography",
   "Copywriting",
+  "TV Commercials",
   "Brand Styling",
   "Model Coordination",
-  "UGC Content",
+  "UGC Campaings",
   "Social Media Management",
+  "Meta Ads Management",
+  "Community Management",
 ];
 
 export default function Services() {

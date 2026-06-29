@@ -74,9 +74,9 @@ function HomePage() {
     <section id="banner">
       <BrandBanner/>
     </section> */}
-      <section id="location">
+      {/* <section id="location">
         <Location />
-      </section>
+      </section> */}
       <FloatingChat/>
 
       <Footer />

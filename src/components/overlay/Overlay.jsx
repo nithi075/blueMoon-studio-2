@@ -43,10 +43,32 @@ export default function Overlay({ isOpen, onClose, type }) {
   // Common Fields for both forms
   const CommonFields = () => (
     <>
-      <div className="form-group">
-        <label>What type of business do you run? *</label>
-        <input type="text" name="businessType" required onChange={handleChange} value={formData.businessType} />
-      </div>
+    <div className="form-group">
+  <label>What type of business do you run? *</label>
+
+  <select
+    name="businessType"
+    required
+    onChange={handleChange}
+    value={formData.businessType}
+  >
+    <option value="">Select Business Type</option>
+
+    <option value="Jewellery Shop">Jewellery Shop</option>
+    <option value="Clothing / Fashion Brand">Clothing / Fashion Brand</option>
+    <option value="Beauty Salon / Spa">Beauty Salon / Spa</option>
+    <option value="Bridal Makeup Artist">Bridal Makeup Artist</option>
+    <option value="Photography Studio">Photography Studio</option>
+    <option value="Restaurant / Cafe">Restaurant / Cafe</option>
+    <option value="Hotel / Resort">Hotel / Resort</option>
+    <option value="Hospital / Clinic">Hospital / Clinic</option>
+    <option value="Educational Institution">Educational Institution</option>
+    <option value="Real Estate">Real Estate</option>
+    <option value="Gym / Fitness Center">Gym / Fitness Center</option>
+    <option value="Other">Other</option>
+
+  </select>
+</div>
       <div className="form-group">
         <label>Company Name *</label>
         <input type="text" name="companyName" required onChange={handleChange} value={formData.companyName} />

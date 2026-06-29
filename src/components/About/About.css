@@ -491,3 +491,82 @@ font-size: 1.7rem;
     font-size: 1.9rem;
   }
 }
+/* =========================================================
+   DESKTOP / LAPTOP (992px & ABOVE)
+========================================================= */
+
+@media (min-width: 992px) {
+
+  .about-section{
+    padding:10rem 6%;
+  }
+
+  .about-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+  }
+
+  .about-content-side{
+    max-width:900px;
+    text-align:center;
+    align-items:center;
+  }
+
+  .about-bg-text{
+    font-size:18rem;
+    letter-spacing:-10px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+  }
+
+  .section-subtitle{
+    font-size:.72rem;
+    letter-spacing:4px;
+    margin-bottom:2rem;
+  }
+
+  .accent-line{
+    width:90px;
+    margin-bottom:2.5rem;
+  }
+
+  .section-title{
+    font-size:clamp(4rem,5vw,6rem);
+    line-height:.95;
+    letter-spacing:-3px;
+    max-width:900px;
+    margin-bottom:2rem;
+  }
+
+  .about-description{
+    max-width:750px;
+    font-size:1rem;
+    line-height:2;
+    margin-bottom:1.5rem;
+  }
+
+  .about-stats-grid{
+    width:100%;
+    max-width:900px;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.8rem;
+    margin-top:4rem;
+  }
+
+  .stat-card{
+    padding:2rem;
+  }
+
+  .stat-number{
+    font-size:2.6rem;
+  }
+
+  .stat-label{
+    font-size:.76rem;
+    letter-spacing:2px;
+  }
+
+}

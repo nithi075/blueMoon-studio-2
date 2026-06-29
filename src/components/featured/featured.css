@@ -15,13 +15,23 @@
   margin-bottom: 60px;
 }
 
+.portfolio-description {
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+}
+
 .bento-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* =========================================================
-   DESKTOP GRID
+   BASE GRID LAYOUT & ITEMS (FIXED FOR 4 ITEMS)
 ========================================================= */
 
 .bento-grid {
@@ -44,18 +54,21 @@
   transform: translateY(-4px);
 }
 
-/* Desktop Layout */
+/* Base Desktop Placement */
 .item-1 {
   grid-column: span 2;
   grid-row: span 2;
 }
 
 .item-2,
-.item-3,
-.item-4,
-.item-5,
-.item-6 {
+.item-3 {
   grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* item-4 stretches full width on desktop to look complete */
+.item-4 {
+  grid-column: span 3;
   grid-row: span 1;
 }
 
@@ -96,7 +109,7 @@
 }
 
 /* =========================================================
-   TABLET
+   TABLET (992px and below)
 ========================================================= */
 
 @media (max-width: 992px) {
@@ -109,20 +122,30 @@
     grid-column: span 2;
     grid-row: span 2;
   }
+
+  .item-4 {
+    grid-column: span 2;
+  }
 }
 
 /* =========================================================
-   MOBILE
+   MOBILE (768px and below) - UNCHANGED AS REQUESTED
 ========================================================= */
 
 @media (max-width: 768px) {
-
   .featured-section {
     padding: 50px 16px;
   }
 
   .portfolio-header {
     margin-bottom: 30px;
+  }
+
+  .portfolio-description {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    padding: 0 1rem;
+    margin-top: 1rem;
   }
 
   .bento-grid {
@@ -202,13 +225,17 @@
 }
 
 /* =========================================================
-   SMALL MOBILE
+   SMALL MOBILE (480px and below) - UNCHANGED AS REQUESTED
 ========================================================= */
 
 @media (max-width: 480px) {
-
   .featured-section {
     padding: 40px 12px;
+  }
+
+  .portfolio-description {
+    font-size: 0.85rem;
+    line-height: 1.7;
   }
 
   .bento-grid {
@@ -227,31 +254,50 @@
     font-size: 10px;
   }
 }
-.portfolio-description {
-  max-width: 720px;
-  margin: 1.5rem auto 0;
 
-  font-size: 1rem;
-  line-height: 1.9;
-  font-weight: 300;
+/* =========================================================
+   DESKTOP / LAPTOP ENHANCEMENTS (992px and above)
+========================================================= */
 
-  color: rgba(255, 255, 255, 0.65);
-
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .portfolio-description {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    padding: 0 1rem;
-    margin-top: 1rem;
+@media (min-width: 992px) {
+  .featured-section {
+    padding: 100px 5%; /* Desktop luxury whitespace padding */
   }
-}
 
-@media (max-width: 480px) {
-  .portfolio-description {
-    font-size: 0.85rem;
-    line-height: 1.7;
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 column structure enforced */
+    grid-auto-rows: 320px; /* Slightly improved rows for desktop visuals */
+    gap: 24px; /* Crisp spacing */
+  }
+
+  /* Enforcing bento grid block styling on large screens */
+  .item-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: auto; /* Resetting mobile aspect ratios if any */
+  }
+
+  .item-2, .item-3 {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  /* Fixed item-4 alignment for desktop layout */
+  .item-4 {
+    grid-column: span 3;
+    grid-row: span 1;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .overlay h3 {
+    font-size: 1.25rem; /* Clean readable font size for desktop */
+  }
+
+  .overlay p {
+    font-size: 0.95rem;
   }
 }
