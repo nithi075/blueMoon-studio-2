@@ -18,8 +18,8 @@ import BrandBanner from "./components/banner/Banner";
 import FloatingChat from "./components/floating/floating";
 import WhyChooseUs from "./components/why/why";
 import BTS from "./components/bts/bts";
-import Services from "./components/Services/services";
 import Team from "./components/Team/Team";
+import Services from "./components/services/Services";
 
 function HomePage() {
   return (
