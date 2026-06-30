@@ -14,7 +14,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Awards from "./components/award/Awards";
-import BrandBanner from "./components/banner/Banner";
 import FloatingChat from "./components/floating/floating";
 import WhyChooseUs from "./components/why/why";
 import BTS from "./components/bts/bts";
@@ -70,10 +69,7 @@ function HomePage() {
         <Contact />
       </section> */}
 
-{/*     
-    <section id="banner">
-      <BrandBanner/>
-    </section> */}
+
       {/* <section id="location">
         <Location />
       </section> */}
