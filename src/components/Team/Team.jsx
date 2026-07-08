@@ -6,6 +6,7 @@ import sharath from "../../assets/sharath.jpeg";
 import pavithra from "../../assets/pavithra.jpg";
 import vinoth from "../../assets/vinoth.jpg";
 import dravid from "../../assets/dravid.jpg";
+import sudharsan from "../../assets/sudharsan.jpg";
 
 const members = [
   // {
@@ -39,7 +40,13 @@ const members = [
     description:
       "Meet Pavithra S.K., the strategic Chief Marketing Officer and CRM Lead driving Bluemoon Media's market expansion. A highly talented digital marketing force, Pavithra masterfully crafts the brand strategies that keep our audience deeply engaged while expanding our market footprint. By cultivating meaningful, long-term client partnerships, she ensures every brand receives an unparalleled client experience.",
   },
-
+ {
+    image: dravid,
+    name: "Dravid",
+    role: "Chief Editor",
+    description:
+      "Meet Dravid, the Chief Editor anchoring the entire post-production pipeline at Bluemoon Media. A master of pacing and visual architecture, he directs post-production to ensure flawless continuity, razor-sharp timing, and compelling storytelling that meets the highest industry standards.",
+  },
   {
     image: vinoth,
     name: "Vinoth V.M.",
@@ -47,14 +54,15 @@ const members = [
     description:
       "Meet Vinoth V.M., Director of Photography shaping the visual identity of Bluemoon Media. A virtuoso of lighting and composition, Vinoth expertly translates raw directorial vision into stunning cinematic visuals. His technical brilliance behind the lens defines our signature storytelling style.",
   },
-
   {
-    image: dravid,
-    name: "Dravid",
-    role: "Chief Editor",
-    description:
-      "Meet Dravid, the Chief Editor anchoring the entire post-production pipeline at Bluemoon Media. A master of pacing and visual architecture, he directs post-production to ensure flawless continuity, razor-sharp timing, and compelling storytelling that meets the highest industry standards.",
-  },
+  image: sudharsan,
+  name: "Sudharsan",
+  role: "Team Manager",
+  description:
+    "Meet Sudharsan, the Team Manager ensuring every project at Bluemoon Media runs seamlessly. He expertly manages shoot schedules, coordinates creative teams, and oversees post-production workflows. With his organized approach and sharp attention to detail, Sudharsan helps deliver every project on time while maintaining the highest quality standards.",
+},
+
+ 
 ];
 
 export default function Team() {

@@ -56,6 +56,7 @@ export default function Overlay({ isOpen, onClose, type }) {
 
     <option value="Jewellery Shop">Jewellery Shop</option>
     <option value="Clothing / Fashion Brand">Clothing / Fashion Brand</option>
+        <option value="Personal Brand">Personal Branding</option>
     <option value="Beauty Salon / Spa">Beauty Salon / Spa</option>
     <option value="Bridal Makeup Artist">Bridal Makeup Artist</option>
     <option value="Photography Studio">Photography Studio</option>
@@ -108,7 +109,7 @@ export default function Overlay({ isOpen, onClose, type }) {
                 <label>What Service are you looking for? *</label>
                 <select name="service" required onChange={handleChange} value={formData.service}>
                   <option value="">Select a Service</option>
-                  <option value="Saree Commercial">Saree Commercial</option>
+                  <option value="Saree Commercial">Reel Commercials</option>
                   <option value="Corporate Film">Corporate Film</option>
                   <option value="Music Video">Music Video</option>
                   <option value="Event Coverage">Event Coverage</option>

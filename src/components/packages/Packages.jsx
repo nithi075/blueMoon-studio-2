@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import "./Packages.css";
@@ -7,30 +6,34 @@ const packagesData = [
   {
     title: "Growth Package",
     subtitle: "CLOTHING & SAREE BRANDS",
-    price: "₹2 LAKHS",
+    price: "₹1,40,000",
+    duration: "/3 months",
+    shoot: "1 Day Shoot",
     features: [
-      "2 Months Content Retainer",
-      "12 Premium Reels",
+      "3 Months Content",
+      "45 Premium Reels",
       "Creative Direction",
       "Professional Model Shoots",
-      "Luxury Color Grading",
-      "Social Media Optimization",
-      "Suitable For Clothing & Saree Brands",
+      "Make Up Artist",
+      "Social Media Posting Management",
+      "Fast and Quick Video Post Deliverables",
     ],
   },
   {
-    title: "Annual Brand Dominance",
+    title: "Annual Growth Package",
     subtitle: "CLOTHING & SAREE BRANDS",
-    price: "₹10 LAKHS",
+    price: "₹5 LAKHS",
+    duration: "/per year",
+    shoot: "4 Days Shoot",
     badge: "MOST POPULAR",
     features: [
       "12 Months Content Retainer",
-      "72+ Premium Reels",
-      "Festival Campaign Coverage",
-      "Cinematic Brand Films",
-      "Monthly Strategy Planning",
-      "Priority Production Support",
-      "Suitable For Clothing & Saree Brands",
+      "183 Premium Reels",
+      "Creative Direction",
+      "Professional Model Shoots",
+      "Make Up Artist",
+      "Social Media Posting Management",
+      "Fast and Quick Video Post Deliverables",
     ],
   },
 ];
@@ -86,10 +89,12 @@ export default function Packages() {
               <h1>{item.price}</h1>
 
               <span className="event-text">
-                {item.price === "₹10 LAKHS"
-                  ? "/per year"
-                  : "/2 months"}
+                {item.duration}
               </span>
+
+              <p className="shoot-text">
+                {item.shoot}
+              </p>
             </div>
 
             <div className="features">
@@ -116,4 +121,3 @@ export default function Packages() {
     </section>
   );
 }
-

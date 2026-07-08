@@ -10,7 +10,9 @@
   overflow: hidden;
 }
 
-.portfolio-header {
+.portfolio-header  {
+  font-size: clamp(3rem, 4vw, 3.5rem);
+  
   text-align: center;
   margin-bottom: 60px;
 }

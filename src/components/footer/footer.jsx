@@ -225,26 +225,7 @@ const Footer = () => {
 
          
 
-          {/* CTA */}
-
-          <motion.a
-
-            href="#contact"
-
-            className="footer-cta-btn"
-
-            whileHover={{
-              scale: 1.03,
-            }}
-
-            whileTap={{
-              scale: 0.97,
-            }}
-          >
-
-            Work With Us ↗
-
-          </motion.a>
+          
 
         </motion.div>
 
