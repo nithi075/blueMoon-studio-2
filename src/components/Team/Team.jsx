@@ -1,6 +1,6 @@
 import "./Team.css";
 
-// import akash from "../../assets/akash.jpg";
+import akash from "../../assets/akash.jpg";
 import jeganathan from "../../assets/jegan.jpg";
 import sharath from "../../assets/sharath.jpeg";
 import pavithra from "../../assets/pavithra.jpg";
@@ -9,13 +9,7 @@ import dravid from "../../assets/dravid.jpg";
 import sudharsan from "../../assets/sudharsan.jpg";
 
 const members = [
-  // {
-  //   image: akash,
-  //   name: "Akash Haridass",
-  //   role: "CEO & Director",
-  //   description:
-  //     "Meet Akash Haridass, the visionary CEO and Director driving Bluemoon Media's end-to-end production. Renowned for turning brand concepts into powerful cinematic stories, he won the prestigious 2023 Best Ad Film Award at the Addplus Contest, setting new benchmarks in commercial filmmaking.",
-  // },
+  
 
   {
     image: jeganathan,
@@ -24,7 +18,13 @@ const members = [
     description:
       "Meet Jeganathan Thangam, the Founder and Creative Director shaping our brand's visual legacy. Bringing elite cinematic expertise from the Kollywood film industry—where he served as Associate Director on major films like NOVP and Athomugam—he meticulously establishes our design standards and brand aesthetics. Today, Jeganathan mentors our creative team to translate big-screen storytelling into innovative, award-winning content for your brand.",
   },
-
+{
+    image: akash,
+    name: "Akash Haridass",
+    role: "CEO & Director",
+    description:
+      "Meet Akash Haridass, the visionary CEO and Director driving Bluemoon Media's end-to-end production. Renowned for turning brand concepts into powerful cinematic stories, he won the prestigious 2023 Best Ad Film Award at the Addplus Contest, setting new benchmarks in commercial filmmaking.",
+  },
   {
     image: sharath,
     name: "Sharath Dhayalan",
