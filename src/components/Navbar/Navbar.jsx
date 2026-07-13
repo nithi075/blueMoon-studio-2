@@ -10,6 +10,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -21,7 +22,7 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.nav 
+    <motion.nav
       className={`navbar ${scrolled ? "scrolled" : ""}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -34,36 +35,68 @@ export default function Navbar() {
 
         <div className="nav-links">
           {navItems.map((item) => (
-            <a key={item.name} href={item.href}>{item.name}</a>
+            <a key={item.name} href={item.href}>
+              {item.name}
+            </a>
           ))}
         </div>
 
-        <a href="#contact" className="nav-cta">Let's Talk</a>
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/918680068246"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-cta"
+        >
+          Let's Talk
+        </a>
 
-        <button className="menu-trigger" onClick={() => setMenuOpen(true)}>
-          <span></span><span></span>
+        <button
+          className="menu-trigger"
+          onClick={() => setMenuOpen(true)}
+        >
+          <span></span>
+          <span></span>
         </button>
       </div>
 
       <AnimatePresence>
         {menuOpen && (
-          <motion.div 
-            className="mobile-nav-overlay" 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
+          <motion.div
+            className="mobile-nav-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <div className="mobile-nav-content">
-              <button className="close-trigger" onClick={() => setMenuOpen(false)}>
+              <button
+                className="close-trigger"
+                onClick={() => setMenuOpen(false)}
+              >
                 <div className="trigger-text">CLOSE</div>
                 <div className="trigger-icon">✕</div>
               </button>
-              
+
               {navItems.map((item, i) => (
-                <a key={i} href={item.href} onClick={() => setMenuOpen(false)}>
+                <a
+                  key={i}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                >
                   {item.name}
                 </a>
               ))}
+
+              {/* Mobile WhatsApp Button */}
+              <a
+                href="https://wa.me/918680068246"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="nav-cta"
+              >
+                Let's Talk
+              </a>
             </div>
           </motion.div>
         )}
