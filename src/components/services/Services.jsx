@@ -15,6 +15,12 @@ const services = [
   "Social Media Management",
   "Meta Ads Management",
   "Community Management",
+  "Movie BTS Making",
+  "Movie Still Photoshoots",
+  "Movie Promotions",
+  "Production Behind The Scenes",
+  "Pod-cast",
+  "Interviews"
 ];
 
 export default function Services() {
