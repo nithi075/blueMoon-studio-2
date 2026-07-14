@@ -162,7 +162,7 @@ const Footer = () => {
               
               "Awards",
               "Instagram",
-              "Contact",
+
             ].map((item, i) => (
 
               <motion.li
