@@ -60,7 +60,7 @@ export default function Instagram() {
           <div className="cta-content">
             <h3>Follow The Studio</h3>
             <p>Behind the scenes, cinematic campaigns, and trending reels updated weekly.</p>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="insta-btn">
+            <a href="https://www.instagram.com/bluemoonmedia_ads" target="_blank" rel="noreferrer" className="insta-btn">
               Follow on Instagram 📷
             </a>
           </div>
