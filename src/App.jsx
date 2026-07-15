@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 
 import Packages from "./components/packages/Packages";
 import Instagram from "./components/instagram/Instagram";
@@ -19,6 +20,8 @@ import WhyChooseUs from "./components/why/why";
 import BTS from "./components/bts/bts";
 import Team from "./components/Team/Team";
 import Services from "./components/services/Services";
+
+
 
 function HomePage() {
   return (
@@ -81,6 +84,9 @@ function HomePage() {
 }
 
 function App() {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
