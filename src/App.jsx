@@ -20,12 +20,14 @@ import WhyChooseUs from "./components/why/why";
 import BTS from "./components/bts/bts";
 import Team from "./components/Team/Team";
 import Services from "./components/services/Services";
+import ScrollToTop from "./components/ScrollTop";
 
 
 
 function HomePage() {
   return (
     <>
+     <ScrollToTop/>
       <Navbar />
 
       <section id="home">
