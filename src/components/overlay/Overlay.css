@@ -182,3 +182,39 @@
 
   .submit-btn { width: 100%; padding: 1rem; }
 }
+/* ==========================================
+   DESKTOP - FIX WHITE FOCUS BACKGROUND
+========================================== */
+@media (min-width: 769px) {
+
+  .overlay-form input,
+  .overlay-form textarea,
+  .overlay-form select {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #fff !important;
+  }
+
+  .overlay-form input:focus,
+  .overlay-form textarea:focus,
+  .overlay-form select:focus,
+  .overlay-form input:active,
+  .overlay-form textarea:active,
+  .overlay-form select:active {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #fff !important;
+    border-color: rgba(0, 210, 230, 0.35);
+    box-shadow: 0 0 0 4px rgba(0, 210, 230, 0.08);
+    outline: none;
+  }
+
+  /* Chrome Autofill Fix */
+  .overlay-form input:-webkit-autofill,
+  .overlay-form input:-webkit-autofill:hover,
+  .overlay-form input:-webkit-autofill:focus,
+  .overlay-form textarea:-webkit-autofill,
+  .overlay-form select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.03) inset !important;
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
