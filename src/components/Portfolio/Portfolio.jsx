@@ -15,6 +15,7 @@ import Fashion9 from "../../assets/saree9.mp4";
 import Fashion10 from "../../assets/saree10.mp4";
 import Fashion11 from "../../assets/saree11.mp4";
 import Fashion12 from "../../assets/saree12.mp4";
+import Fashion13 from "../../assets/saree13.mp4";
 
 import Commercial1 from "../../assets/video1.mp4";
 import Commercial2 from "../../assets/video2.mp4";
@@ -84,8 +85,9 @@ const Portfolio = () => {
 
   const portfolioItems = [
         { id: 41, title: "Customized Kanchipuram Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion12, type: "video" },
-    { id: 42, title: "Banarasi Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion11, type: "video" },
-    { id: 43, title: "Mysore Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion10, type: "video" },
+            { id: 43, title: "10 Sec To Find a Fake Saree", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion13, type: "video" },
+    { id: 42, title: "Choosing A Saree Color", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion11, type: "video" },
+    { id: 44, title: "Silk Saree for Office Wear", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion10, type: "video" },
     { id: 1, title: "Small Butta Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion1, type: "video" },
     { id: 2, title: "Anjali Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion2, type: "video" },
     { id: 3, title: "Anuska Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion3, type: "video" },
