@@ -12,6 +12,9 @@ import Fashion6 from "../../assets/saree6.mp4";
 import Fashion7 from "../../assets/saree7.mp4";
 import Fashion8 from "../../assets/saree8.mp4";
 import Fashion9 from "../../assets/saree9.mp4";
+import Fashion10 from "../../assets/saree10.mp4";
+import Fashion11 from "../../assets/saree11.mp4";
+import Fashion12 from "../../assets/saree12.mp4";
 
 import Commercial1 from "../../assets/video1.mp4";
 import Commercial2 from "../../assets/video2.mp4";
@@ -80,6 +83,9 @@ const Portfolio = () => {
   }, [selectedVideo]);
 
   const portfolioItems = [
+        { id: 41, title: "Kanchipuram Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion12, type: "video" },
+    { id: 42, title: "Banarasi Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion11, type: "video" },
+    { id: 43, title: "Mysore Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion10, type: "video" },
     { id: 1, title: "Small Butta Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion1, type: "video" },
     { id: 2, title: "Anjali Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion2, type: "video" },
     { id: 3, title: "Anuska Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion3, type: "video" },
@@ -89,6 +95,7 @@ const Portfolio = () => {
     { id: 21, title: "Urvi Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion7, type: "video" },
     { id: 22, title: "Pure Pochampally Cotton Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion8, type: "video" },
     { id: 23, title: "Ikat Cotton Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion9, type: "video" },
+
 
     { id: 5, title: "Importannce of Chalk Piece", subtitle: "Advertisement Showcase", category: "commercials", tag: "TV COMMERCIAL", year: "2025", orientation: "vertical", video: Commercial1, type: "video" },
     { id: 6, title: "Digital TV Campaign", subtitle: "Modern Advertisement", category: "commercials", tag: "TV AD", year: "2025", orientation: "vertical", video: Commercial2, type: "video" },
