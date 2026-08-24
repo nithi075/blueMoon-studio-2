@@ -56,6 +56,8 @@ import Bts1 from "../../assets/hero.mp4";
 import Bts2 from "../../assets/bts2.mp4";
 import Bts3 from "../../assets/bts3.mp4";
 
+import Honda1 from "../../assets/honda.mp4";
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("fashion-shoots");
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -84,10 +86,10 @@ const Portfolio = () => {
   }, [selectedVideo]);
 
   const portfolioItems = [
-        { id: 41, title: "Customized Kanchipuram Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion12, type: "video" },
-            { id: 43, title: "10 Sec To Find a Fake Saree", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion13, type: "video" },
-    { id: 42, title: "Choosing A Saree Color", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion11, type: "video" },
-    { id: 44, title: "Silk Saree for Office Wear", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion10, type: "video" },
+        { id: 41, title: "Customized Kanchipuram Silk Sarees", subtitle: "Vivaaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion12, type: "video" },
+            { id: 43, title: "10 Sec To Find a Fake Saree", subtitle: "Vivaaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion13, type: "video" },
+    { id: 42, title: "Choosing A Saree Color", subtitle: "Vivaaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion11, type: "video" },
+    { id: 44, title: "Silk Saree for Office Wear", subtitle: "Vivaaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion10, type: "video" },
     { id: 1, title: "Small Butta Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion1, type: "video" },
     { id: 2, title: "Anjali Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion2, type: "video" },
     { id: 3, title: "Anuska Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion3, type: "video" },
@@ -133,7 +135,8 @@ const Portfolio = () => {
 
     { id: 38, title: "Fashion Setup BTS", subtitle: "Luxe Studio", category: "bts", tag: "BTS", year: "2025", orientation: "horizontal", video: Bts1, type: "video" },
     { id: 39, title: "Studio Lighting Process", subtitle: "Mahaveer Jewellers", category: "bts", tag: "BTS", year: "2025", orientation: "vertical", video: Bts2, type: "video" },
-    { id: 40, title: "The Creative Making Of", subtitle: "Life of Fisherman", category: "bts", tag: "BTS", year: "2025", orientation: "horizontal", video: Bts3, type: "video" }
+    { id: 40, title: "The Creative Making Of", subtitle: "Life of Fisherman", category: "bts", tag: "BTS", year: "2025", orientation: "horizontal", video: Bts3, type: "video" },
+    { id: 45, title: "Honda Masinagudi Reel", subtitle: "Honda Bikes", category: "honda", tag: "HONDA", year: "2026", orientation: "horizontal", video: Honda1, type: "video" }
   ];
 
   const categories = [
@@ -142,7 +145,8 @@ const Portfolio = () => {
     { id: "clothing-shoots", label: "CLOTHING BRAND REELS" },
     { id: "jewellery-shoots", label: "JEWELLERY BRAND REELS" },
     { id: "product-shoots", label: "PRODUCT SHOOTS" },
-    { id: "bts", label: "BTS" }
+    { id: "bts", label: "BTS" },
+    { id: "honda", label: "HONDA REELS" }
   ];
 
   const filteredItems = portfolioItems.filter((item) => item.category === activeCategory);
