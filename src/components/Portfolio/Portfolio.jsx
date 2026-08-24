@@ -83,9 +83,9 @@ const Portfolio = () => {
   }, [selectedVideo]);
 
   const portfolioItems = [
-        { id: 41, title: "Kanchipuram Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion12, type: "video" },
-    { id: 42, title: "Banarasi Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion11, type: "video" },
-    { id: 43, title: "Mysore Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion10, type: "video" },
+        { id: 41, title: "Customized Kanchipuram Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion12, type: "video" },
+    { id: 42, title: "Banarasi Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion11, type: "video" },
+    { id: 43, title: "Mysore Silk Sarees", subtitle: "Vivaha Silks", category: "fashion-shoots", tag: "SAREE", year: "2026", orientation: "horizontal", video: Fashion10, type: "video" },
     { id: 1, title: "Small Butta Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion1, type: "video" },
     { id: 2, title: "Anjali Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion2, type: "video" },
     { id: 3, title: "Anuska Silk Sarees", subtitle: "Luxe Studio", category: "fashion-shoots", tag: "SAREE", year: "2025", orientation: "horizontal", video: Fashion3, type: "video" },
